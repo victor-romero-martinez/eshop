@@ -1,0 +1,49 @@
+.card__box {
+  height: 200px;
+  border-radius: .4vmax;
+  padding: var(--_padding__vertical);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 46px;
+}
+
+.card__text h3 {
+  font-weight: 400;
+}
+
+.card__text h3 span {
+  font-weight: 700;
+}
+
+.background__text {
+  color: #fff;
+  font-size: var(--_font_xxxl);
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: .6;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.card__btn {
+  width: fit-content;
+  color: #ffffff;
+  background-color: #ff6347;
+  border-radius: 2vmax;
+  padding: 4px 12px;
+  z-index: 20;
+}
+
+.card__img {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}

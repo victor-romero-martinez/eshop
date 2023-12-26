@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border-radius: .4vmax;
   position: relative;
 }
 
@@ -16,13 +17,15 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  background-color: tomato;
+  background-color: #ff6347;
+  border-radius: .4vmax 0 0 .4vmax;
 }
 
 .big__card__btn {
   background-color: #fff;
+  font-weight: 400;
   padding: 10px 12px;
-  border-radius: 2rem;
+  border-radius: 2vmax;
   cursor: pointer;
   transition: scale .2s ease-in-out;
   z-index: 10;

@@ -5,7 +5,6 @@
   --font-xl: 2rem;
   --_font_xxxl: 3rem;
   --_padding__vertical: 16px;
-  font-weight: 200;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
@@ -29,7 +28,7 @@ button {
 
 .container {
   max-width: 1440px;
-  padding-inline: 10px;
+  padding: 16px 10px;
   margin: auto;
 }
 

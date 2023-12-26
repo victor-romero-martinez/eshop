@@ -1,0 +1,9 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 60px;
+}
+
+.card__container {
+  /* height: 300px; */
+}

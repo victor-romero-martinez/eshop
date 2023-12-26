@@ -1,5 +1,5 @@
-
 import BigCard from '@/components/bigCrad/BigCard'
+import CategorySection from '@/components/categorySection/CategorySextion'
 import { getData } from '@/util/getFetch'
 
 export default async function Home() {
@@ -9,6 +9,7 @@ export default async function Home() {
   return (
     <main className='w-full'>
       <BigCard />
+      <CategorySection />
     </main>
   )
 }
