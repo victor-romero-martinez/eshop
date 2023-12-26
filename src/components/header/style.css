@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+  padding: 15px 0;
+}
+
+.container__header {
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.logo {
+  text-align: center;
+}

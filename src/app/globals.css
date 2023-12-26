@@ -1,0 +1,57 @@
+* {
+  --font-sm: .8rem;
+  --font-md: 1rem;
+  --font-lg: 1.25rem;
+  --font-xl: 2rem;
+  --_font_xxxl: 3rem;
+  --_padding__vertical: 16px;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.container {
+  max-width: 1440px;
+  padding-inline: 10px;
+  margin: auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-fill {
+  width: -webkit-fill-available;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333335;
+    color: #faf9f6
+  }
+
+  a {
+    color: #faf9f6
+  }
+} */

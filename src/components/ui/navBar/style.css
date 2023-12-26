@@ -1,0 +1,164 @@
+.navbar a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  padding-left: 16px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Btn {
+  color: currentColor;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+}
+
+.mobile {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  z-index: 990;
+}
+
+.mobile[data-open="true"] {
+  visibility: visible;
+}
+
+.desk {
+  display: none;
+}
+
+.navBar__Btn__hidden {
+  color: white;
+  background-color: transparent;
+  position: absolute;
+  top: 24px;
+  right: 12px;
+  border: none;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.navbar__inner {
+  display: flex;
+  gap: 16px;
+}
+
+.navbar__hidden {
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 990;
+}
+
+.navbar__hidden .navbar__inner {
+  height: 100vh;
+  background-color: #22272e;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 16px;
+  margin: 0;
+}
+
+.mobile .navbar__inner a {
+  color: white;
+  font-size: 2rem;
+}
+
+.desk .navbar__inner a {
+  font-size: 1rem;
+}
+
+.navbar__inner a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.navbar__inner li {
+  list-style: none;
+  opacity: .8;
+  transition: all .2s ease-in-out;
+}
+
+.navbar__inner li:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* right */
+.right {
+  opacity: .8;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  font-size: 1rem;
+}
+
+.touch {
+  opacity: .8;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.touch:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* media query */
+@media screen and (width > 375px) {
+  .navbar__hidden {
+    grid-template-columns: .4fr 1fr;
+  }
+}
+
+@media screen and (width > 500px) {
+  .navbar__hidden {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (width >=768px) {
+  .navBar__Btn {
+    display: none;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desk {
+    display: block;
+  }
+}
+
+/* color scheme */
+/* @media (prefers-color-scheme: dark) {
+  .navbar__hidden .navbar__inner {
+    background-color: white;
+  }
+
+  .navBar__Btn {
+    color: white;
+  }
+
+  .navBar__Btn__hidden {
+    color: #22272e;
+  }
+
+  .mobile .navbar__inner a {
+    color: #22272e;
+  }
+} */
