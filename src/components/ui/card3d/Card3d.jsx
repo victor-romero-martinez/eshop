@@ -7,7 +7,7 @@ import "./style.css";
  * @param {string} [props.color] - Color text
  * @param {string}[ props.background] - Color background
  */
-export default function Crad3d({ color, background }) {
+export default function Card3d({ color, background }) {
   return (
     <div
       className="card__box"

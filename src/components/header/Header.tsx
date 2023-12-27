@@ -7,14 +7,14 @@ import './style.css'
 const navLink = [
   { url: '/', name: 'home' },
   { url: '/shop', name: 'shop' },
-  { url: '/about us', name: 'about us' },
+  { url: '/about', name: 'about' },
   { url: '/blog', name: 'blog' },
 ]
 
 export default function Header() {
   return (
     <header className="header">
-      <div className="container__header">
+      <div className="container__header container">
         <Link href='/' className='logo'>
           <Image src='/logo.png' alt="phlox logo" width={105} height={31} />
         </Link>

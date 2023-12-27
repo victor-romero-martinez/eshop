@@ -1,9 +1,64 @@
-.grid {
+.first,
+.second {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  gap: 60px;
+  gap: 10px;
+  grid-template-areas:
+    "a"
+    "b"
+    'c';
+  padding-bottom: 10px;
 }
 
-.card__container {
-  /* height: 300px; */
+.a {
+  grid-area: a;
+}
+
+.b {
+  grid-area: b;
+}
+
+.c {
+  grid-area: c;
+}
+
+@media (width > 668px) {
+
+  .first,
+  .second {
+    gap: 16px;
+    padding-bottom: 16px;
+  }
+
+  .first {
+    grid-template-areas:
+      "a b"
+      "c c";
+  }
+
+  .second {
+    grid-template-areas:
+      "a b"
+      "c c";
+  }
+}
+
+@media (width > 1130px) {
+
+  .first,
+  .second {
+    gap: 24px;
+    padding-bottom: 24px;
+  }
+
+  .first {
+    grid-template-areas:
+      "a b c";
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+
+  .second {
+    grid-template-areas:
+      "a b c";
+    grid-template-columns: 2fr 1fr 1fr;
+  }
 }

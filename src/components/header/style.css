@@ -4,7 +4,6 @@
 }
 
 .container__header {
-  max-width: 1440px;
   display: flex;
   align-items: center;
   margin: auto;

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { menuIcon, searchIcon, shoppingCart, xIcon } from "./icons";
 import Link from "next/link";
 import "./style.css";
@@ -11,6 +12,8 @@ import "./style.css";
  */
 function Navbar({ links }) {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  console.log("pathname: ", pathname);
 
   /** hanble menu open or close on mobile device */
   const menuHandle = () => setIsOpen((prev) => !prev);
@@ -20,13 +23,15 @@ function Navbar({ links }) {
 
   return (
     <div className="navbar">
-      <div>
+      <div className="right">
         <div className="desk">
           <nav>
             <ul className="navbar__inner">
               {links.map((l) => (
                 <li key={l.url}>
-                  <a href={l.url}>{l.name}</a>
+                  <a href={l.url} data-active={pathname === l.url}>
+                    {l.name}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -47,7 +52,11 @@ function Navbar({ links }) {
               <ul className="navbar__inner">
                 {links.map((l) => (
                   <li key={l.url}>
-                    <Link href={l.url} onClick={colseNavOnMobile}>
+                    <Link
+                      href={l.url}
+                      onClick={colseNavOnMobile}
+                      data-active={pathname === l.url}
+                    >
                       {l.name}
                     </Link>
                   </li>
@@ -57,7 +66,7 @@ function Navbar({ links }) {
           </nav>
         </div>
       </div>
-      <div className="right">
+      <div className="left">
         <Link href="/login" className="touch">
           Login
         </Link>
