@@ -4,10 +4,23 @@ import "./style.css";
 
 /** Card 3d component
  * @param {Object} props
+ * @param {string} [props.text] - Small text
+ * @param {string} props.title - Big text
+ * @param {string} props.backgroundText - Text in background
+ * @param {string} props.image - Image
+ * @param {string} [props.btnText] - Text on btn
  * @param {string} [props.color] - Color text
  * @param {string}[ props.background] - Color background
  */
-export default function Card3d({ color, background }) {
+export default function Card3d({
+  text,
+  title,
+  backgroundText,
+  image,
+  btnText = "Browse",
+  color,
+  background,
+}) {
   return (
     <div
       className="card__box"
@@ -18,16 +31,16 @@ export default function Card3d({ color, background }) {
     >
       <div className="card__text">
         <h3>
-          Enjoy <br />
-          <span>With</span>
+          {text} <br />
+          <span>{title}</span>
         </h3>
-        <span className="background__text">earphone</span>
+        <span className="background__text">{backgroundText}</span>
         <Link href="#" title="browse" className="card__btn">
-          Browse
+          {btnText}
         </Link>
       </div>
       <div className="card__img">
-        <Image src="/eearphone.png" alt="eearphone" fill />
+        <Image src={image} alt={backgroundText} fill />
       </div>
     </div>
   );
