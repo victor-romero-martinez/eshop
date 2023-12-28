@@ -1,5 +1,5 @@
 import BigCard from '@/components/bigCrad/BigCard'
-import CategorySection from '@/components/categorySection/CategorySextion'
+import CategorySection from '@/components/categorySection/CategorySection'
 import { getData } from '@/util/getFetch'
 
 export default async function Home() {
