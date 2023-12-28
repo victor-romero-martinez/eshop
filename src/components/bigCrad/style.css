@@ -25,7 +25,7 @@
   background-color: #fff;
   font-weight: 400;
   padding: 10px 12px;
-  border-radius: 2vmax;
+  border-radius: 10vmax;
   cursor: pointer;
   transition: scale .2s ease-in-out;
   z-index: 10;
