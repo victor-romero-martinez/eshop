@@ -25,17 +25,6 @@
 
   .first,
   .second {
-    gap: 16px;
-    padding-bottom: 16px;
-  }
-
-  .first {
-    grid-template-areas:
-      "a b"
-      "c c";
-  }
-
-  .second {
     grid-template-areas:
       "a b"
       "c c";
@@ -43,12 +32,6 @@
 }
 
 @media (width > 1130px) {
-
-  .first,
-  .second {
-    gap: 24px;
-    padding-bottom: 24px;
-  }
 
   .first {
     grid-template-areas:

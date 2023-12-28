@@ -40,7 +40,7 @@ export default function Card3d({
         </Link>
       </div>
       <div className="card__img">
-        <Image src={image} alt={backgroundText} fill />
+        <Image src={image} alt={backgroundText} width={200} height={200} />
       </div>
     </div>
   );

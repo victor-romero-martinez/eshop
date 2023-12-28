@@ -17,7 +17,7 @@ export default function CategorySection() {
       </div>
       <div className="second">
         <div className="card__container a">
-          <Card3d text="Best" title="Gaming" backgroundText="console" image="/consola.png" color="#323267" background="#edeef2" />
+          <Card3d text="Best" title="Gaming" backgroundText="console" image="/consola.png" color="#323267" background="#BFF71F" />
         </div>
         <div className="card__container b">
           <Card3d text="Play" title="Game" backgroundText="vr" image="/meta_quest.png" background="#133140" color="#fff" />

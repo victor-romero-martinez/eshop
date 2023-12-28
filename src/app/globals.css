@@ -33,7 +33,7 @@ button {
 .container {
   max-width: 1340px;
   padding: 16px 10px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .h-full {
