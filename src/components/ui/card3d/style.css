@@ -2,9 +2,10 @@
   height: 220px;
   border-radius: .4vmax;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
-  /* padding: 20px; */
+  padding: 20px;
 }
 
 .card__text {
@@ -44,16 +45,8 @@
   z-index: 20;
 }
 
-
-.card__img {
-  position: relative;
-  width: min(180px, 200px);
-  height: min(180px, 200px);
-  z-index: 21;
-}
-
-.card__img img {
+.card__text~img {
   position: absolute;
-  top: 10px;
-  left: -20px;
+  top: 20px;
+  right: 20px;
 }

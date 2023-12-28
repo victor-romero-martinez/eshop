@@ -39,9 +39,7 @@ export default function Card3d({
           {btnText}
         </Link>
       </div>
-      <div className="card__img">
-        <Image src={image} alt={backgroundText} width={200} height={200} />
-      </div>
+      <Image src={image} alt={backgroundText} width={200} height={200} />
     </div>
   );
 }
