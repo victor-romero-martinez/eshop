@@ -4,7 +4,7 @@ import { getData } from '@/util/getFetch'
 
 export default async function Home() {
 
-  const data: [] = await getData("https://api.escuelajs.co/api/v1/products?offset=0&limit=5")
+  // const data: [] = await getData("https://api.escuelajs.co/api/v1/products?offset=0&limit=5")
 
   return (
     <main className='w-full'>

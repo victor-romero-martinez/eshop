@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { menuIcon, searchIcon, shoppingCart, xIcon } from "./icons";
 import Link from "next/link";
+import { menuIcon, searchIcon, shoppingCart, xIcon } from "./icons";
+
 import "./style.css";
 
 /** NavBar responsive component
@@ -13,7 +14,6 @@ import "./style.css";
 function Navbar({ links }) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  console.log("pathname: ", pathname);
 
   /** hanble menu open or close on mobile device */
   const menuHandle = () => setIsOpen((prev) => !prev);
