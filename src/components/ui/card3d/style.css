@@ -1,11 +1,12 @@
 .card__box {
+  --border: .4vmax;
   min-width: 100px;
   height: 220px;
-  border-radius: .4vmax;
+  border-radius: var(--border);
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
   padding: 20px;
 }
@@ -39,15 +40,15 @@
 }
 
 .background__text {
-  color: #fff;
+  color: currentColor;
   font-size: var(--_font_xxxl);
   font-weight: 700;
   text-transform: uppercase;
-  opacity: .6;
+  opacity: .4;
   position: absolute;
   top: 50%;
   left: 10%;
-  transform-style: preserve-3d;
+  z-index: 1;
 }
 
 .card__btn:hover {
@@ -55,8 +56,31 @@
   scale: 1.1;
 }
 
-.card__text~img {
+.cover {
+  width: 250px;
+  height: 250px;
+  border-radius: 1vmax;
+  rotate: 13deg;
   position: absolute;
-  top: 20px;
+  right: -50px;
+  bottom: -50px;
+  transition: scale .2s;
+}
+
+.card__text~img {
+  /* width: 200px; */
+  /* height: 200px; */
+  position: absolute;
   right: 20px;
+  z-index: 2;
+  transition: scale .2s;
+}
+
+.card__box:hover .card__text~img {
+  scale: 1.2;
+}
+
+.card__box:hover .cover {
+  scale: 1.6;
+  border-radius: 50%;
 }

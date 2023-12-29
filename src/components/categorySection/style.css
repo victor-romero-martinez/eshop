@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  gap: 10px;
+  gap: 16px;
   grid-template-areas:
     "a"
     "b"

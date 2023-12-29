@@ -16,7 +16,7 @@ export default function Header() {
     <header className="header">
       <div className="container__header container">
         <Link href='/' className='logo'>
-          <Image src='/logo.png' alt="phlox logo" width={105} height={31} />
+          <Image src='/logo.webp' alt="phlox logo" width={105} height={31} />
         </Link>
         <Navbar links={navLink} />
       </div>

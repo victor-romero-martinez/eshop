@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import VanillaTilt from "vanilla-tilt";
 import "./style.css";
 
 /** Card 3d component
@@ -12,6 +11,7 @@ import "./style.css";
  * @param {string} [props.btnText] - Text on btn
  * @param {string} [props.color] - Color text
  * @param {string}[ props.background] - Color background
+ * @param {string}[ props.coverColor] - Color cover
  */
 export default function Card3d({
   text,
@@ -21,6 +21,7 @@ export default function Card3d({
   btnText = "Browse",
   color,
   background,
+  coverColor = "#836CBB",
 }) {
   return (
     <div
@@ -40,7 +41,14 @@ export default function Card3d({
         </Link>
       </div>
       <span className="background__text">{backgroundText}</span>
-      <Image src={image} alt={backgroundText} width={200} height={200} />
+      {/* <img src={image} alt={`picture of ${backgroundText}`} /> */}
+      <div className="cover" style={{ backgroundColor: coverColor }}></div>
+      <Image
+        src={image}
+        alt={`picture of ${backgroundText}`}
+        width={200}
+        height={200}
+      />
     </div>
   );
 }

@@ -19,7 +19,7 @@ export default function BigCard() {
         </div>
         <picture className='img__container'>
           <h3 className='text__background'>HEADPHONE</h3>
-          <Image src='/headset.png' alt='headset' fill title='headphone' />
+          <Image src='/headset.webp' alt='headset' fill title='headphone' />
         </picture>
       </article>
     </section>
