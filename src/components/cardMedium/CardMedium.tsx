@@ -7,7 +7,8 @@ export default function CardMedium({
   color,
   backgroundColor,
   spanRight,
-  pRight,
+  p1Right,
+  p2Right,
   date,
   spanLeft,
   h2,
@@ -18,7 +19,8 @@ export default function CardMedium({
   color: string,
   backgroundColor: string,
   spanRight: string,
-  pRight: string,
+  p1Right: string,
+  p2Right?: string,
   date: string,
   spanLeft: string,
   h2: string,
@@ -31,10 +33,10 @@ export default function CardMedium({
         color: color,
         background: backgroundColor
       }}>
-        <div>
-          <span>{spanRight}</span>
-          <p className='big__txt'>{pRight}</p>
-          <span>{date}</span>
+        <div className='w-full'>
+          <span className='padding'>{spanRight}</span>
+          <p className='big__txt padding'>{p1Right} <br />{p2Right}</p>
+          <span className='padding'>{date}</span>
         </div>
         <div className="medium__content w-full">
           <div>

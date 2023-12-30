@@ -14,11 +14,26 @@ export default async function Home() {
       <CategorySection />
       <Feature />
       <CardMedium
+        img='/headset2.webp'
+        color='#fdfdfd'
+        backgroundColor='#D5568F'
+        spanRight='20% off'
+        p1Right='fine'
+        p2Right='smile'
+        date='15 nov to 7 dic'
+        spanLeft='beat solo air'
+        h2='Summer Sale'
+        pLeft='Company thats grown from 270 to 480 employees in
+        the last 12 months.'
+        linkTxt='Shop'
+      />
+      <CardMedium
         img='/watch.webp'
         color='#fdfdfd'
         backgroundColor='#2dcc70'
         spanRight='20% off'
-        pRight='happy hours'
+        p1Right='happy'
+        p2Right='hours'
         date='15 nov to 7 dic'
         spanLeft='beat solo air'
         h2='Summer Sale'
