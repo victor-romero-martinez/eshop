@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import LinkBtn from "../linkBtn/LinkBtn";
 import "./style.css";
 
 /** Card 3d component
@@ -36,9 +36,14 @@ export default function Card({
           {text} <br />
           <span>{title}</span>
         </h3>
-        <Link href="#" title="browse" className="card__btn">
+        <LinkBtn
+          href="#"
+          title="browse"
+          className="card__btn"
+          styles={{ color: "#fff", backgroundColor: "#f66347" }}
+        >
           {btnText}
-        </Link>
+        </LinkBtn>
       </div>
       <span className="background__text">{backgroundText}</span>
       {/* <img src={image} alt={`picture of ${backgroundText}`} /> */}

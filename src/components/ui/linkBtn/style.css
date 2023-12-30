@@ -1,0 +1,7 @@
+.link__bottom {
+  width: fit-content;
+  background-color: white;
+  padding: 4px 14px;
+  border-radius: 20vmax;
+  z-index: 10;
+}

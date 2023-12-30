@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import LinkBtn from '@/components/ui/linkBtn/LinkBtn'
 import './style.css'
 
 export default function BigCard() {
@@ -11,7 +11,8 @@ export default function BigCard() {
             <br />
             <span>Wireless</span>
           </h2>
-          <Link href='#' title='futher information' className='big__card__btn'>Futher information</Link>
+          {/* <Link href='#' title='futher information' className='big__card__btn'>Futher information</Link> */}
+          <LinkBtn href='#'>Futher information</LinkBtn>
         </div>
         <div className='desc__container h-full w-fill _padding__inline'>
           <p className='desc__title'>Description</p>

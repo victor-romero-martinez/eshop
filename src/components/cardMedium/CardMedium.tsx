@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import LinkBtn from '@/components/ui/linkBtn/LinkBtn'
 import './style.css'
 
 export default function CardMedium({
@@ -43,11 +43,11 @@ export default function CardMedium({
             <span>{spanLeft}</span>
             <h2>{h2}</h2>
             <span>{pLeft}</span>
-            <Link href={'#'} style={{ color: backgroundColor }}>{linkTxt}</Link>
+            <LinkBtn href='#' styles={{ color: backgroundColor }}>Shop now</LinkBtn>
           </div>
         </div>
         <Image src={img} alt={`image of ${img}`} width={200} height={200} className='card__medium__img' />
       </div>
-    </article>
+    </article >
   )
 };

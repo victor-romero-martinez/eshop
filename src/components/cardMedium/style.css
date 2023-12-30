@@ -47,9 +47,6 @@
 
 .card__medium__inner a {
   width: fit-content;
-  background-color: white;
-  padding: 4px 14px;
-  border-radius: 20vmax;
   margin-top: 16px;
 }
 
