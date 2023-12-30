@@ -11,8 +11,7 @@ export default function BigCard() {
             <br />
             <span>Wireless</span>
           </h2>
-          {/* <Link href='#' title='futher information' className='big__card__btn'>Futher information</Link> */}
-          <LinkBtn href='#'>Futher information</LinkBtn>
+          <LinkBtn href='#' styles={{ color: '#ff6347' }}>Futher information</LinkBtn>
         </div>
         <div className='desc__container h-full w-fill _padding__inline'>
           <p className='desc__title'>Description</p>

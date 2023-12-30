@@ -5,7 +5,7 @@ import "./style.css";
  * @param {object} props
  * @param {React.ReactNode} props.children - Element
  * @param {string} props.href - Link
- * @param {object} [props.styles] - Styles
+ * @param {object} [props.styles] - CSSProperties
  */
 export default function LinkBtn({ children, href, styles }) {
   return (
