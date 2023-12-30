@@ -4,7 +4,7 @@ import './style.css'
 
 export default function BigCard() {
   return (
-    <section className='container'>
+    <section className='container padding'>
       <article className='big__card w-fill'>
         <div className='title_section h-full w-fill _padding__inline'>
           <h2>Beats Solo

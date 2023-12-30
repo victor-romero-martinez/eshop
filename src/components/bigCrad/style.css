@@ -5,12 +5,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border-radius: .4vmax;
+  border-radius: var(--border);
   position: relative;
+  overflow: hidden;
 }
 
 ._padding__inline {
-  padding-inline: var(--_padding__vertical, 16px);
+  padding-inline: var(--_padding);
 }
 
 .title_section {
@@ -18,16 +19,15 @@
   flex-direction: column;
   align-items: start;
   background-color: #ff6347;
-  border-radius: .4vmax 0 0 .4vmax;
 }
 
 .big__card__btn {
   background-color: #fff;
   font-weight: 400;
   padding: 10px 12px;
-  border-radius: 10vmax;
+  border-radius: 20vmax;
   cursor: pointer;
-  transition: scale .2s ease-in-out;
+  transition: scale .2s;
   z-index: 10;
 }
 
@@ -38,6 +38,7 @@
 
 .title_section>h2 {
   font-weight: 400;
+  font-size: var(--font-md);
 }
 
 .title_section>h2 span {
@@ -73,6 +74,7 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
+  padding-block: 0 30px;
 }
 
 .desc__title {
@@ -122,8 +124,8 @@
 
 @media (width > 1024px) {
   ._padding__inline {
-    --_padding__vertical: 60px;
-    padding-inline: var(--_padding__vertical);
+    --_padding: 60px;
+    padding-inline: var(--_padding);
   }
 
   .title_section>h2 {
@@ -151,8 +153,8 @@
   }
 
   ._padding__inline {
-    --_padding__vertical: 160px;
-    padding-inline: var(--_padding__vertical);
+    --_padding: 160px;
+    padding-inline: var(--_padding);
   }
 
   .text__background {

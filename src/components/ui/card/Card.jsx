@@ -13,7 +13,7 @@ import "./style.css";
  * @param {string}[ props.background] - Color background
  * @param {string}[ props.coverColor] - Color cover
  */
-export default function Card3d({
+export default function Card({
   text,
   title,
   backgroundText,

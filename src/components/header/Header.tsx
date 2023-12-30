@@ -14,7 +14,7 @@ const navLink = [
 export default function Header() {
   return (
     <header className="header">
-      <div className="container__header container">
+      <div className="container__header container padding">
         <Link href='/' className='logo'>
           <Image src='/logo.webp' alt="phlox logo" width={105} height={31} />
         </Link>

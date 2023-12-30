@@ -1,0 +1,36 @@
+.feature {
+  display: grid;
+  gap: 16px;
+}
+
+.feature__inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature__inner h4,
+p {
+  margin: 0;
+}
+
+.feature__inner p {
+  opacity: .7;
+}
+
+@media (width > 560px) {
+  .feature {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature__inner {
+    justify-content: center;
+  }
+}
+
+@media (width > 1024px) {
+  .feature {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
