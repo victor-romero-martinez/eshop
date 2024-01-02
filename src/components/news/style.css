@@ -1,0 +1,17 @@
+.news__section {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.news__section h3 {
+  font-size: var(--_font_xxxl);
+  margin-bottom: 0;
+}
+
+.news__section-article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}

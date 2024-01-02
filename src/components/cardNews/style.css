@@ -1,0 +1,27 @@
+.card__news {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__news img {
+  border-radius: var(--border);
+}
+
+.card__news span {
+  color: #708090;
+}
+
+.card__news h4 {
+  font-size: var(--font-lg);
+  margin-block: 8px;
+}
+
+.card__news p {
+  max-width: 32ch;
+  text-wrap: pretty;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

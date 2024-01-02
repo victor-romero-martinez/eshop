@@ -2,6 +2,7 @@ import BigCard from '@/components/bigCrad/BigCard'
 import CardMedium from '@/components/cardMedium/CardMedium'
 import CategorySection from '@/components/categorySection/CategorySection'
 import Feature from '@/components/feature/Feature'
+import News from '@/components/news/News'
 import { getData } from '@/util/getFetch'
 
 export default async function Home() {
@@ -41,6 +42,7 @@ export default async function Home() {
         the last 12 months.'
         linkTxt='Shop'
       />
+      <News />
     </main>
   )
 }

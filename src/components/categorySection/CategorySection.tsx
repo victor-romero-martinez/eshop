@@ -8,7 +8,7 @@ export default function CategorySection() {
         <Card text="Enjoy" title="With" backgroundText="earphone" image="/earphone.webp" color="#fff" background="#222222" coverColor="#C78B2C" />
       </div>
       <div className="card__container b">
-        <Card text="New" title="Wear" backgroundText="gaget" image="/watch2.webp" background="#6A84C4" color="#fff" coverColor="#9FF9AD" />
+        <Card text="New" title="Wear" backgroundText="gadgets" image="/watch2.webp" background="#6A84C4" color="#fff" coverColor="#9FF9AD" />
       </div>
       <div className="card__container c">
         <Card text="Triend" title="Device" backgroundText="laptop" image="/laptop.webp" background="#f42c37" color="#fff" coverColor="#727397" />
