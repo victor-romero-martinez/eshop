@@ -5,10 +5,15 @@ import CategorySection from '@/components/categorySection/CategorySection'
 import Feature from '@/components/feature/Feature'
 import News from '@/components/news/News'
 import { getData } from '@/util/getFetch'
+import type { Product } from '@/definitions/type'
+
+type Data = {
+  products: Product[];
+}
 
 export default async function Home() {
 
-  // const data: [] = await getData("https://api.escuelajs.co/api/v1/products?offset=0&limit=5")
+  const { products }: Data = await getData("https://dummyjson.com/products?skip=0&limit=10")
 
   return (
     <main className='w-full'>
@@ -29,7 +34,7 @@ export default async function Home() {
         the last 12 months.'
         linkTxt='Shop'
       />
-      <BestSeller />
+      <BestSeller data={products} />
       <CardMedium
         img='/watch.webp'
         color='#fdfdfd'

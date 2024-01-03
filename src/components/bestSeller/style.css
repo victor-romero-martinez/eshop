@@ -7,3 +7,11 @@
   font-size: var(--_font_xxxl);
   margin-bottom: 0;
 }
+
+.seller__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 48px;
+  gap: 20px 60px;
+}
