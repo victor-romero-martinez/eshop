@@ -1,0 +1,9 @@
+.seller {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.seller h3 {
+  font-size: var(--_font_xxxl);
+  margin-bottom: 0;
+}

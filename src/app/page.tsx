@@ -1,3 +1,4 @@
+import BestSeller from '@/components/bestSeller/BestSeller'
 import BigCard from '@/components/bigCrad/BigCard'
 import CardMedium from '@/components/cardMedium/CardMedium'
 import CategorySection from '@/components/categorySection/CategorySection'
@@ -28,6 +29,7 @@ export default async function Home() {
         the last 12 months.'
         linkTxt='Shop'
       />
+      <BestSeller />
       <CardMedium
         img='/watch.webp'
         color='#fdfdfd'

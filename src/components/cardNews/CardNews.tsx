@@ -9,9 +9,13 @@ export default function CardNews({ imgUrl, date, title, description }: {
 }) {
   return (
     <article className='card__news'>
-      <Image src={imgUrl} width={320} height={240} alt={`picture of ${imgUrl}`} />
+      <picture>
+        <Image src={imgUrl} width={320} height={240} alt={`picture of ${imgUrl}`} />
+      </picture>
       <span>{date}</span>
-      <h4>{title}</h4>
+      <a href="#">
+        <h4>{title}</h4>
+      </a>
       <p>{description}</p>
     </article>
   )

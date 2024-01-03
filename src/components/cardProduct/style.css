@@ -1,0 +1,34 @@
+.card__product {
+  max-width: 200px;
+  overflow: hidden;
+}
+
+.card__product img {
+  border-radius: var(--border);
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card__product h4 {
+  margin: 0;
+}
+
+.card__product-badges,
+.card__product-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.card__product-desc {
+  text-align: start;
+  text-wrap: pretty;
+}
+
+.card__product-discount {
+  font-size: var(--font-sm);
+  text-decoration: line-through;
+}
