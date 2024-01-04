@@ -1,5 +1,6 @@
 .link__bottom {
   width: fit-content;
+  height: fit-content;
   background-color: white;
   padding: 4px 14px;
   border-radius: 20vmax;
@@ -29,7 +30,3 @@
   scale: 1.1;
   transition: .2s all;
 }
-
-/* .link__bottom:hover {
-  scale: 1.05;
-} */

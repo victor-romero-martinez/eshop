@@ -11,7 +11,7 @@ export default function BigCard() {
             <br />
             <span>Wireless</span>
           </h2>
-          <LinkBtn href='#' styles={{ color: '#ff6347' }}>Futher information</LinkBtn>
+          <LinkBtn href='#' styles={{ color: '#ff6347' }}>Shop now</LinkBtn>
         </div>
         <div className='desc__container h-full w-fill _padding__inline'>
           <p className='desc__title'>Description</p>
@@ -19,7 +19,7 @@ export default function BigCard() {
         </div>
         <picture className='img__container'>
           <h3 className='text__background'>HEADPHONE</h3>
-          <Image src='/headset.webp' alt='headset' fill title='headphone' />
+          <Image src='/headset.webp' alt='headset' width={520} height={520} title='headphone' />
         </picture>
       </article>
     </section>

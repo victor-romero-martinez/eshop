@@ -60,11 +60,14 @@
 .text__background {
   font-size: var(--_font_xxxl);
   font-weight: 700;
+  text-transform: uppercase;
   color: #fff;
   overflow: hidden;
 }
 
 .img__container img {
+  transform: scale(.5);
+  position: absolute;
   overflow: hidden;
   clip-path: polygon(50% 0%, 90% 20%, 97% 61%, 73% 92%, 28% 92%, 0% 60%, 1% 37%);
 }
@@ -104,9 +107,8 @@
     font-size: var(--_font_xxxl);
   }
 
-  .img__container {
-    width: 320px;
-    height: 320px;
+  .img__container img {
+    transform: scale(.6);
   }
 }
 
@@ -141,9 +143,8 @@
     font-size: var(--_font_xxxl);
   }
 
-  .img__container {
-    width: 520px;
-    height: 520px;
+  .img__container img {
+    transform: scale(.8);
   }
 }
 
@@ -160,5 +161,9 @@
   .text__background {
     --_font_xxxl: 9rem;
     font-size: var(--_font_xxxl);
+  }
+
+  .img__container img {
+    transform: scale(1);
   }
 }

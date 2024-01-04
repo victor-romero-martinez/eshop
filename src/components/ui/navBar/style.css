@@ -23,14 +23,17 @@
 .mobile {
   width: 100%;
   position: absolute;
+  opacity: 0;
   top: 0;
   right: 0;
   visibility: hidden;
+  transition: .2s ease-in-out;
   z-index: 990;
 }
 
 .mobile[data-open="true"] {
   visibility: visible;
+  opacity: 1;
 }
 
 .desk {
@@ -59,11 +62,9 @@ a[data-active="true"] {
 }
 
 .navbar__hidden {
+  background-color: #f5008a80;
   display: grid;
   grid-template-columns: 0fr 1fr;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  z-index: 990;
 }
 
 .navbar__hidden .navbar__inner {
@@ -98,7 +99,7 @@ a[data-active="true"] {
 .navbar__inner li {
   list-style: none;
   opacity: .8;
-  transition: all .2s ease-in-out;
+  transition: .2s;
 }
 
 .navbar__inner li:hover {

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
+
 import './globals.css'
 
 const poppins = Poppins({
@@ -9,13 +10,13 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://eshop-tau-six.vercel.app"),
   title: {
-    template: '%s | HAPPY SHOMPING',
-    default: 'HAPPY SHOPPING'
+    template: '%s | Happy Shopping',
+    default: 'Happy Shopping'
   },
-  description: 'Tienda de electronicos',
-  openGraph: { images: 'opengraph-image.png' }
+  description: 'Electronics Store',
+  openGraph: { images: 'opengraph-image.webp' }
 }
 
 export default function RootLayout({
