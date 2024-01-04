@@ -1,6 +1,7 @@
 .card__product {
   max-width: 200px;
   overflow: hidden;
+  padding: 10px;
 }
 
 .card__product img {

@@ -40,3 +40,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* media query */
+@media (width > 757px) and (width < 1140px) {
+  .card__news {
+    flex-direction: row;
+    gap: 60px;
+  }
+}

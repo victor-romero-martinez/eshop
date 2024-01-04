@@ -8,10 +8,36 @@
   margin-bottom: 0;
 }
 
+
 .seller__inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
   margin-top: 48px;
-  gap: 20px 60px;
+  gap: 60px 0;
+}
+
+/* media query */
+@media (width > 499px) {
+  .seller__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width > 699px) {
+  .seller__inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width > 899px) {
+  .seller__inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (width > 1439px) {
+  .seller__inner {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
