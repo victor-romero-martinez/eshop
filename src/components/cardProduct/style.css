@@ -2,6 +2,8 @@
   max-width: 200px;
   overflow: hidden;
   padding: 10px;
+  cursor: pointer;
+  transition: .2s;
 }
 
 .card__product img {
@@ -10,6 +12,7 @@
   height: 200px;
   aspect-ratio: 1/1;
   object-fit: cover;
+  object-position: center;
 }
 
 .card__product h4 {
@@ -39,11 +42,6 @@
   transition: .2s;
 }
 
-.card__product-price button:hover {
-  scale: 1.1;
-  color: #2dcc70;
-}
-
 .price {
   margin-top: 10px;
 }
@@ -51,4 +49,15 @@
 .card__product-discount {
   font-size: var(--font-sm);
   text-decoration: line-through;
+}
+
+@media (hover:hover) {
+  .card__product:hover {
+    box-shadow: 10px 5px 10px #70809050;
+    border-radius: var(--border);
+  }
+
+  .card__product-price button:hover {
+    scale: 1.1;
+  }
 }

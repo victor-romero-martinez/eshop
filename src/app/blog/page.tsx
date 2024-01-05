@@ -1,3 +1,9 @@
+import News from '@/components/news/News'
+
 export default function Page() {
-  return <div>Blog</div>
+  return (
+    <main>
+      <News />
+    </main>
+  )
 };

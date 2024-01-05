@@ -60,11 +60,13 @@
   transition: scale .2s;
 }
 
-.card__box:hover .card__text~img {
-  scale: 1.2;
-}
+@media (hover:hover) {
+  .card__box:hover .card__text~img {
+    scale: 1.2;
+  }
 
-.card__box:hover .cover {
-  scale: 1.6;
-  border-radius: 50%;
+  .card__box:hover .cover {
+    scale: 1.6;
+    border-radius: 50%;
+  }
 }

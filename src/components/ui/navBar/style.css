@@ -102,11 +102,6 @@ a[data-active="true"] {
   transition: .2s;
 }
 
-.navbar__inner li:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
 /* right */
 .right {
   flex: 1;
@@ -127,9 +122,16 @@ a[data-active="true"] {
   transition: all .2s ease-in-out;
 }
 
-.touch:hover {
-  opacity: 1;
-  transform: scale(1.1);
+@media (hover:hover) {
+  .navbar__inner li:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  .touch:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
 }
 
 /* media query */

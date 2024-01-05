@@ -14,10 +14,6 @@
   transition: all .2s ease;
 }
 
-.card__news:hover picture img {
-  scale: 1.05;
-}
-
 .card__news span {
   color: #708090;
 }
@@ -25,10 +21,6 @@
 .card__news h4 {
   font-size: var(--font-lg);
   margin-block: 8px;
-}
-
-.card__news h4:hover {
-  color: #1D54AB;
 }
 
 .card__news p {
@@ -39,6 +31,16 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media (hover:hover) {
+  .card__news:hover picture img {
+    scale: 1.05;
+  }
+
+  .card__news h4:hover {
+    color: #1D54AB;
+  }
 }
 
 /* media query */
