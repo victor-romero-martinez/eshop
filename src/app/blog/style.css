@@ -1,14 +1,14 @@
-.news__section {
+.blogs__section {
   text-align: center;
   margin-bottom: 48px;
 }
 
-.news__section h3 {
+.blogs__section h3 {
   font-size: var(--_font_xxxl);
-  margin-bottom: 0;
+  margin-block: 0;
 }
 
-.news__section-article {
+.blogs__section-article {
   display: flex;
   flex-direction: row;
   justify-content: center;

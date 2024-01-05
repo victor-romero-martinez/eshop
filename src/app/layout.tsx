@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: '%s | Happy Shopping',
     default: 'Happy Shopping'
   },
-  description: 'Electronics Store',
+  description: 'Everything you need in one place',
   openGraph: { images: 'opengraph-image.webp' }
 }
 

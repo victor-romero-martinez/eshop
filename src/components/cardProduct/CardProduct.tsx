@@ -1,9 +1,14 @@
+'use client'
+
 import Badges from '@/components/ui/badges/Badges'
 import { DollarIcon, ShoppingBagIcon } from '../icons/icons'
+import { useRouter } from 'next/navigation'
+
 import './style.css'
 
 /** Card Product */
 export default function CardProduct({
+  id,
   title,
   description,
   price,
@@ -15,6 +20,7 @@ export default function CardProduct({
   thumbnail,
   images,
 }: {
+  id: string | number
   title?: string,
   description?: string,
   price: number,
@@ -26,8 +32,14 @@ export default function CardProduct({
   thumbnail?: string,
   images: string[]
 }) {
+  const router = useRouter();
+
+  const navigate = (id: string | number) => {
+    router.push(`/products/${id}/product`)
+  }
+
   return (
-    <article className='card__product'>
+    <article className='card__product' onClick={() => navigate(id)}>
       <picture>
         <img src={images[0]} alt={`image of ${title}`} />
       </picture>

@@ -6,8 +6,8 @@ import './style.css'
 
 const navLink = [
   { url: '/', name: 'home' },
+  { url: '/products', name: 'products' },
   { url: '/blog', name: 'blog' },
-  { url: '/about', name: 'about' },
 ]
 
 export default function Header() {

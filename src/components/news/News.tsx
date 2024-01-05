@@ -2,6 +2,8 @@ import CardNews from '../cardNews/CardNews'
 import { blogs } from '@/util/blogPost'
 import './style.css'
 
+const newsBlogs = blogs.slice(0, 3)
+
 export default function Page() {
   return (
     <section className='container padding'>
@@ -10,8 +12,8 @@ export default function Page() {
         <p>There are many variations passages</p>
       </div>
       <div className='news__section-article'>
-        {blogs.map(i => (
-          <CardNews key={i.imgUrl} {...i} />
+        {newsBlogs.map(i => (
+          <CardNews key={i.id} {...i} />
         ))}
       </div>
     </section>
