@@ -1,3 +1,24 @@
+.product__filter {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.product__filter select {
+  border-radius: 20vmax;
+  padding: 4px 12px;
+}
+
+.product__filter select option {
+  text-transform: capitalize;
+}
+
+.product__filter button {
+  background-color: var(--primary, #D3C51E);
+  border-radius: 20vmax;
+  padding: 4px 12px;
+}
+
 .product__inner {
   display: grid;
   grid-template-columns: 1fr;

@@ -11,7 +11,7 @@
 
 .btn__style::before {
   content: '';
-  background-color: #1D54AB;
+  background-color: var(--terciary, #1D54AB);
   top: 0;
   left: 50%;
   right: 50%;

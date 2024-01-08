@@ -6,6 +6,9 @@
   --_font_xxxl: 3rem;
   --_padding: 20px;
   --border: .4rem;
+  --primary: #ff8811;
+  --secondary: #9dd9d2;
+  --terciary: #392f5a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;

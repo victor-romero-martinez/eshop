@@ -40,7 +40,7 @@ export default function Card({
           href="#"
           title="browse"
           className="card__btn"
-          styles={{ color: "#fff", backgroundColor: "#f66347" }}
+          styles={{ color: "#fff", backgroundColor: "var(--primary, #f66347)" }}
         >
           {btnText}
         </LinkBtn>

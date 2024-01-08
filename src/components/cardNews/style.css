@@ -36,17 +36,12 @@
 }
 
 @media (hover:hover) {
-  .card__news:hover {
-    box-shadow: 10px 5px 10px #70809050;
-    border-radius: var(--border);
-  }
-
   .card__news:hover picture img {
     scale: 1.05;
   }
 
   .card__news h4:hover {
-    color: #1D54AB;
+    color: var(--terciary, #1D54AB);
   }
 }
 

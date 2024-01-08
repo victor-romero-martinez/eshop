@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="container padding">
       <div className='social'>
-        <Image src='/logo.webp' alt="loog" width={105} height={31} />
+        <Image src='/logo.webp' alt="loog" width={128} height={49} />
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique eligendi est eos ea vel placeat ipsam dolore, voluptatum voluptatem ratione architecto accusantium incidunt veritatis non ad vero iure laudantium dolorem.</p>
         <div>
           <a href='#' referrerPolicy='no-referrer' target='_blank'>

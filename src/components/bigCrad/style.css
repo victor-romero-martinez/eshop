@@ -33,7 +33,7 @@
 
 @media (hover:hover) {
   .big__card__btn:hover {
-    outline: 2px solid #cdb0fa;
+    outline: 2px solid var(--terciary, #cdb0fa);
     scale: 1.1;
   }
 }

@@ -1,0 +1,23 @@
+.product__inner h1 {
+  margin-block: 0;
+}
+
+.product__inner-raiting {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+/* TODO image */
+
+.product__inner-desc {
+  max-width: 630px;
+}
+
+.product__inner-price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-block: 18px;
+}

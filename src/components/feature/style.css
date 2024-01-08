@@ -4,6 +4,7 @@
 }
 
 .feature__inner {
+  color: var(--primary, #ff6347);
   display: flex;
   justify-content: flex-start;
   align-items: center;

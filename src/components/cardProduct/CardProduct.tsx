@@ -35,7 +35,7 @@ export default function CardProduct({
   const router = useRouter();
 
   const navigate = (id: string | number) => {
-    router.push(`/products/${id}/product`)
+    router.push(`/products/${id}`)
   }
 
   return (
@@ -50,17 +50,16 @@ export default function CardProduct({
       </div>
       <p className='card__product-desc'>{description}</p>
       <p className='card__product-price price'>
+        <DollarIcon width='18' height='18' />
         {discountPercentage ? (
           <>
             <span className='card__product-discount'>{price}</span>
             <strong>{price - discountPercentage}</strong>
-            <DollarIcon width='18' height='18' />
           </>
         )
           :
           (<span>
             <strong>{price}</strong>
-            <DollarIcon width='18' height='18' />
           </span>)}
         <button type='button' title='Add to cart'>
           <ShoppingBagIcon />
