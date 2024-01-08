@@ -58,11 +58,11 @@
 }
 
 a[data-active="true"] {
-  color: var(--primary, #f5008a) !important;
+  color: var(--primary) !important;
 }
 
 .navbar__hidden {
-  background-color: #f5008a80;
+  background-color: #22272e70;
   display: grid;
   grid-template-columns: 0fr 1fr;
 }

@@ -44,7 +44,7 @@ export default async function Page() {
     <main className="container padding">
       <div className="product__filter">
         <select name="category">
-          <option value="all" selected>All</option>
+          <option value="all">All</option>
           {categories.map((c, i) => (
             <option key={i} value={c}>{c}</option>
           ))}
