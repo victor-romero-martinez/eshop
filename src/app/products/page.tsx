@@ -5,6 +5,7 @@ import { Metadata } from "next";
 
 import './style.css'
 import { Suspense } from "react";
+import Link from "next/link";
 
 type FetchPeoduct = {
   products: Product[]
@@ -15,49 +16,52 @@ export const metadata: Metadata = {
 }
 
 const categories = [
-  "smartphones",
-  "laptops",
-  "fragrances",
-  "skincare",
-  "groceries",
-  "home-decoration",
-  "furniture",
-  "tops",
-  "womens-dresses",
-  "womens-shoes",
-  "mens-shirts",
-  "mens-shoes",
-  "mens-watches",
-  "womens-watches",
-  "womens-bags",
-  "womens-jewellery",
-  "sunglasses",
-  "automotive",
-  "motorcycle",
-  "lighting"
+  "Smartphones",
+  "Laptops",
+  "Fragrances",
+  "Skincare",
+  "Groceries",
+  "Home-decoration",
+  "Furniture",
+  "Tops",
+  "Womens-dresses",
+  "Womens-shoes",
+  "Mens-shirts",
+  "Mens-shoes",
+  "Mens-watches",
+  "Womens-watches",
+  "Womens-bags",
+  "Womens-jewellery",
+  "Sunglasses",
+  "Automotive",
+  "Motorcycle",
+  "Lighting"
 ]
 
 export default async function Page() {
-  const { products }: FetchPeoduct = await getData('https://dummyjson.com/products')
+  const { products } = await getData<FetchPeoduct>('https://dummyjson.com/products?limit=28&skip=0')
 
   return (
-    <main className="container padding">
-      <div className="product__filter">
-        <select name="category">
-          <option value="all">All</option>
+    <main className="container padding product__page">
+      <aside className="product__filter">
+        <h3>Categories</h3>
+        <ul>
           {categories.map((c, i) => (
-            <option key={i} value={c}>{c}</option>
+            <li key={i}>
+              <Link href={'#'}>
+                {c}
+              </Link>
+            </li>
           ))}
-        </select>
-        <button type="button">Filter</button>
-      </div>
-      <div className="product__inner">
+        </ul>
+      </aside>
+      <section className="product__inner">
         <Suspense fallback={'loading'} >
           {products.map(p => (
             <CardProduct key={p.id} {...p} />
           ))}
         </Suspense>
-      </div>
+      </section>
     </main>
   )
 };

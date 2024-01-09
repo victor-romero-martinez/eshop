@@ -17,6 +17,7 @@
 
 .card__product h4 {
   margin: 0;
+  text-align: center;
 }
 
 .card__product-badges,
