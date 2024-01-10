@@ -1,6 +1,6 @@
-import type { Product } from "@/definitions/type";
 import { Metadata } from "next";
 import Link from "next/link";
+import FilterComponent from "@/components/filterComponent/FilterComp";
 
 import './style.css'
 
@@ -9,26 +9,26 @@ export const metadata: Metadata = {
 }
 
 const categories = [
-  "Smartphones",
-  "Laptops",
-  "Fragrances",
-  "Skincare",
-  "Groceries",
-  "Home-decoration",
-  "Furniture",
-  "Tops",
-  "Womens-dresses",
-  "Womens-shoes",
-  "Mens-shirts",
-  "Mens-shoes",
-  "Mens-watches",
-  "Womens-watches",
-  "Womens-bags",
-  "Womens-jewellery",
-  "Sunglasses",
-  "Automotive",
-  "Motorcycle",
-  "Lighting"
+  "smartphones",
+  "laptops",
+  "fragrances",
+  "skincare",
+  "groceries",
+  "home-decoration",
+  "furniture",
+  "tops",
+  "womens-dresses",
+  "womens-shoes",
+  "mens-shirts",
+  "mens-shoes",
+  "mens-watches",
+  "momens-watches",
+  "momens-bags",
+  "womens-jewellery",
+  "sunglasses",
+  "automotive",
+  "motorcycle",
+  "lighting"
 ]
 
 export default async function Page({ children }: { children: React.ReactNode }) {
@@ -41,7 +41,7 @@ export default async function Page({ children }: { children: React.ReactNode }) 
           <ul>
             {categories.map((c, i) => (
               <li key={i}>
-                <Link href={'#'}>
+                <Link href={`/products/category/${c}`}>
                   {c}
                 </Link>
               </li>
@@ -49,6 +49,9 @@ export default async function Page({ children }: { children: React.ReactNode }) 
           </ul>
         </div>
       </aside>
+      <div className="filter__mobile">
+        <FilterComponent />
+      </div>
       {children}
     </main>
   )
