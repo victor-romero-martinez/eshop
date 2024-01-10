@@ -1,12 +1,13 @@
 .product__page {
-  min-height: 100vh;
   display: flex;
   gap: 30px;
 }
 
 .product__filter {
+  display: none;
   position: sticky;
   margin-top: 48px;
+  top: 98px;
 }
 
 .product__filter ul {
@@ -24,11 +25,12 @@
 }
 
 /* media query */
-/* @media (width > 499px) {
-  .product__inner {
-    grid-template-columns: 1fr 1fr;
+@media (width > 499px) {
+  .product__filter {
+    display: block;
   }
-} */
+
+}
 
 @media (width > 699px) {
   .product__inner {
