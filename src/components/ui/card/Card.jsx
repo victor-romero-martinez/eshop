@@ -2,10 +2,11 @@ import Image from "next/image";
 import LinkBtn from "../linkBtn/LinkBtn";
 import "./style.css";
 
-/** Card 3d component
+/** Card component
  * @param {Object} props
  * @param {string} [props.text] - Small text
  * @param {string} props.title - Big text
+ * @param {string} props.url - Url
  * @param {string} props.backgroundText - Text in background
  * @param {string} props.image - Image
  * @param {string} [props.btnText] - Text on btn
@@ -16,6 +17,7 @@ import "./style.css";
 export default function Card({
   text,
   title,
+  url,
   backgroundText,
   image,
   btnText = "Browse",
@@ -37,7 +39,7 @@ export default function Card({
           <span>{title}</span>
         </h3>
         <LinkBtn
-          href="#"
+          href={url}
           title="browse"
           className="card__btn"
           styles={{ color: "#fff", backgroundColor: "var(--primary, #f66347)" }}

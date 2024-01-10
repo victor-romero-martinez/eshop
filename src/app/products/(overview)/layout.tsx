@@ -3,35 +3,17 @@ import Link from "next/link";
 import FilterComponent from "@/components/filterComponent/FilterComp";
 
 import './style.css'
+import { getData } from "@/util/getFetch";
 
 export const metadata: Metadata = {
   title: 'All products'
 }
 
-const categories = [
-  "smartphones",
-  "laptops",
-  "fragrances",
-  "skincare",
-  "groceries",
-  "home-decoration",
-  "furniture",
-  "tops",
-  "womens-dresses",
-  "womens-shoes",
-  "mens-shirts",
-  "mens-shoes",
-  "mens-watches",
-  "momens-watches",
-  "momens-bags",
-  "womens-jewellery",
-  "sunglasses",
-  "automotive",
-  "motorcycle",
-  "lighting"
-]
+type Category = string[]
 
 export default async function Page({ children }: { children: React.ReactNode }) {
+
+  const categories = await getData<Category>('https://dummyjson.com/products/categories')
 
   return (
     <main className="container padding product__page">

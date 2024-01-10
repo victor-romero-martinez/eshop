@@ -15,7 +15,12 @@ export default function Error({
     }}>
       <div>
         <h1>Failed request</h1>
-        <button onClick={() => reset()}>Try again</button>
+        <button onClick={() => reset()} style={{
+          padding: '4px 12x',
+          borderRadius: 'var(--border)',
+          border: '2px solid #22276e',
+          cursor: 'pointer'
+        }}>Try again</button>
       </div>
     </main>
   )

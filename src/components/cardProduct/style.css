@@ -29,6 +29,7 @@
 }
 
 .card__product-desc {
+  font-size: var(--font-md);
   text-align: start;
   text-wrap: pretty;
   display: -webkit-box;
@@ -36,6 +37,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: 14px;
 }
 
 .card__product-price button {
