@@ -62,14 +62,18 @@ a[data-active="true"] {
 }
 
 .navbar__hidden {
-  background-color: #22272e70;
   display: grid;
   grid-template-columns: 0fr 1fr;
 }
 
+.navbar__hidden>div {
+  background-color: var(--terciary);
+  opacity: .7;
+}
+
 .navbar__hidden .navbar__inner {
   height: 100vh;
-  background-color: #22272e;
+  background-color: var(--terciary);
   color: white;
   flex-direction: column;
   justify-content: center;

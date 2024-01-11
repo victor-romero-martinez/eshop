@@ -1,5 +1,5 @@
 import CardNews from '../cardNews/CardNews'
-import { blogs } from '@/util/blogPost'
+import { blogs } from '@/lib/blogPost'
 import './style.css'
 
 const newsBlogs = blogs.slice(0, 3)

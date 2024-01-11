@@ -1,5 +1,5 @@
 import CardNews from "@/components/cardNews/CardNews";
-import { blogs } from "@/util/blogPost";
+import { blogs } from "@/lib/blogPost";
 import { Metadata } from 'next'
 import './style.css'
 

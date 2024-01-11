@@ -8,7 +8,7 @@
   --border: .4rem;
   --primary: #ff8811;
   --secondary: #9dd9d2;
-  --terciary: #392f5a;
+  --terciary: #22272e;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
@@ -28,6 +28,10 @@ body {
 a {
   color: currentColor;
   text-decoration: none;
+}
+
+ul {
+  padding: 0;
 }
 
 li {

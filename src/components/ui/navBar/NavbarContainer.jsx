@@ -67,9 +67,6 @@ function Navbar({ links }) {
         </div>
       </div>
       <div className="left">
-        <Link href="/login" className="touch">
-          Login
-        </Link>
         <button type="button" title="search" className="Btn touch">
           {searchIcon}
         </button>

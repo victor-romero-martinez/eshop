@@ -1,4 +1,4 @@
-import { getData } from "@/util/getFetch";
+import { getData } from "@/lib/getFetch";
 import type { Product } from "@/definitions/type";
 import ProductsViewer from "@/components/productsViewer/ProductViewer";
 

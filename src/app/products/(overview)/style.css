@@ -14,22 +14,6 @@
   padding: 0;
 }
 
-.product__filter a {
-  text-transform: capitalize;
-}
-
-.filter__mobile {
-  width: 40px;
-  height: 40px;
-  background-color: var(--secondary);
-  border-radius: 50%;
-  display: flex;
-  place-items: center;
-  position: absolute;
-  left: 40px;
-  bottom: 40px;
-}
-
 /* media query */
 @media (width > 499px) {
   .product__filter {

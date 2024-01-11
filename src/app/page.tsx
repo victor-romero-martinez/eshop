@@ -4,7 +4,7 @@ import CardMedium from '@/components/cardMedium/CardMedium'
 import CategorySection from '@/components/categorySection/CategorySection'
 import Feature from '@/components/feature/Feature'
 import News from '@/components/news/News'
-import { getData } from '@/util/getFetch'
+import { getData } from '@/lib/getFetch'
 import type { Product } from '@/definitions/type'
 
 type Data = {

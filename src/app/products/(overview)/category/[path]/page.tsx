@@ -1,6 +1,6 @@
 import ProductsViewer from "@/components/productsViewer/ProductViewer";
 import type { Product } from "@/definitions/type";
-import { getData } from "@/util/getFetch";
+import { getData } from "@/lib/getFetch";
 
 type TProduct = {
   products: Product[]
