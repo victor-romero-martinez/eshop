@@ -1,0 +1,16 @@
+.loader {
+  flex: 1;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.anim {
+  animation: spinner 200ms infinite linear;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

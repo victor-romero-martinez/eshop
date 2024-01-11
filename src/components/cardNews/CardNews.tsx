@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import './style.css'
 
 export default function CardNews({ imgUrl, date, title, description }: {
@@ -10,13 +11,13 @@ export default function CardNews({ imgUrl, date, title, description }: {
   return (
     <article className='card__news'>
       <picture>
-        <Image src={imgUrl} width={320} height={240} alt={`picture of ${imgUrl}`} />
+        <Image src={imgUrl} width={320} height={240} alt={`picture of ${imgUrl}`} loading='lazy' />
       </picture>
       <div>
         <span>{date}</span>
-        <a href="#">
+        <Link href="/onprogress">
           <h4>{title}</h4>
-        </a>
+        </Link>
         <p>{description}</p>
       </div>
     </article>

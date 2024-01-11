@@ -48,13 +48,13 @@ export default function Card({
         </LinkBtn>
       </div>
       <span className="background__text">{backgroundText}</span>
-      {/* <img src={image} alt={`picture of ${backgroundText}`} /> */}
       <div className="cover" style={{ backgroundColor: coverColor }}></div>
       <Image
         src={image}
         alt={`picture of ${backgroundText}`}
         width={200}
         height={200}
+        priority
       />
     </div>
   );

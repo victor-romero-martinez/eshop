@@ -32,7 +32,7 @@ export default async function Home() {
         h2='Summer Sale'
         pLeft='Company thats grown from 270 to 480 employees in
         the last 12 months.'
-        linkTxt='Shop'
+        linkTxt='/onprogress'
       />
       <BestSeller data={products} />
       <CardMedium
@@ -47,7 +47,7 @@ export default async function Home() {
         h2='Summer Sale'
         pLeft='Company thats grown from 270 to 480 employees in
         the last 12 months.'
-        linkTxt='Shop'
+        linkTxt='/onprogress'
       />
       <News />
     </main>

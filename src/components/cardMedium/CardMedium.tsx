@@ -13,7 +13,7 @@ export default function CardMedium({
   spanLeft,
   h2,
   pLeft,
-  linkTxt
+  linkTxt = '#'
 }: {
   img: string,
   color: string,
@@ -43,10 +43,10 @@ export default function CardMedium({
             <span>{spanLeft}</span>
             <h2>{h2}</h2>
             <span>{pLeft}</span>
-            <LinkBtn href='#' styles={{ color: backgroundColor }}>Shop now</LinkBtn>
+            <LinkBtn href={linkTxt} styles={{ color: backgroundColor }}>Shop now</LinkBtn>
           </div>
         </div>
-        <Image src={img} alt={`image of ${img}`} width={200} height={200} className='card__medium__img' />
+        <Image src={img} alt={`image of ${img}`} width={200} height={200} loading='lazy' className='card__medium__img' />
       </div>
     </article >
   )
