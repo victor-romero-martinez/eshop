@@ -1,17 +1,25 @@
 import ProductsViewer from "@/components/productsViewer/ProductViewer";
-import type { Product } from "@/definitions/type";
+import type { Product, TPagination } from "@/definitions/type";
 import { getData } from "@/lib/getFetch";
+import { paginationSplit } from "@/lib/paginatioFn";
 
 type TProduct = {
   products: Product[]
 }
 
+type Data = TProduct & TPagination
+
 export default async function Page({ params }: { params: { path: string } }) {
   const { path } = params;
 
-  const { products } = await getData<TProduct>(`https://dummyjson.com/products/category/${path}`);
+  const data = await getData<Data>(`https://dummyjson.com/products/category/${path}`);
 
-  if (products.length < 1) {
+  const pages = paginationSplit({
+    total: data.total,
+    limit: data.limit,
+  });
+
+  if (data.products.length < 1) {
     return (
       <div style={{
         flex: '1'
@@ -24,6 +32,6 @@ export default async function Page({ params }: { params: { path: string } }) {
   }
 
   return (
-    <ProductsViewer products={products} />
+    <ProductsViewer products={data.products} pagination={pages} />
   )
 };

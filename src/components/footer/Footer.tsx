@@ -9,15 +9,17 @@ export default function Footer() {
     <footer className="container padding">
       <div className='social'>
         <Image src='/logo.webp' alt="loog" width={128} height={49} />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique eligendi est eos ea vel placeat ipsam dolore, voluptatum voluptatem ratione architecto accusantium incidunt veritatis non ad vero iure laudantium dolorem.</p>
+        <p>
+          Page made for practice purposes, the data provided is merely illustrative obtained from <a href="https://dummyjson.com/" target='_blank' rel="noreferrer nofollow" >https://dummyjson.com</a>
+        </p>
         <div>
-          <a href='#' referrerPolicy='no-referrer' target='_blank'>
+          <a href='#' rel="noreferrer nofollow" target='_blank'>
             <MetaIcon width='20' height='20' />
           </a>
-          <a href='#' referrerPolicy='no-referrer' target='_blank'>
+          <a href='#' rel="noreferrer nofollow" target='_blank'>
             <TwiterIcon width='20' height='20' />
           </a>
-          <a href='#' referrerPolicy='no-referrer' target='_blank'>
+          <a href='#' rel="noreferrer nofollow" target='_blank'>
             <InstagramIcon width='20' height='20' />
           </a>
         </div>

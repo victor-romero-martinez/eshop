@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import FilterComponent from "@/components/filterComponent/FilterComp";
 import LinkActive from "@/components/ui/linkActive/LinkActive";
 import { getData } from "@/lib/getFetch";
-import Link from "next/link";
 
 import './style.css'
 
@@ -22,10 +21,12 @@ export default async function Page({ children }: { children: React.ReactNode }) 
         <div className="product__filter">
           <h3>Categories</h3>
           <ul>
-            <li><Link href='/products'>All</Link></li>
+            <li>
+              <LinkActive url="products" name="All" />
+            </li>
             {categories.map((c, i) => (
               <li key={i}>
-                <LinkActive url={c} />
+                <LinkActive url={`products/category/${c}`} />
               </li>
             ))}
           </ul>

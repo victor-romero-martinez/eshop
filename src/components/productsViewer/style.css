@@ -7,6 +7,18 @@
   gap: 60px 0;
 }
 
+.product__pagination,
+.product__pagination-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.product__pagination-inner {
+  max-width: 300px;
+  gap: 4px;
+  margin-top: 14px;
+}
+
 /* media query */
 @media (width > 699px) {
   .product__inner {

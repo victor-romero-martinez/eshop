@@ -1,11 +1,10 @@
 'use client'
 import { useState } from 'react'
 import { FilterIcon } from '../icons/icons'
-import './style.css'
 import { xIcon } from '../ui/navBar/icons'
-import Link from 'next/link'
-import { formatedString } from '@/lib/formatedString'
 import LinkActive from '../ui/linkActive/LinkActive'
+
+import './style.css'
 
 export default function FilterComponent({ items }: { items: string[] }) {
   const [open, setOpen] = useState(false)
@@ -17,19 +16,21 @@ export default function FilterComponent({ items }: { items: string[] }) {
   return (
     <>
       <div className='filter__mobile'>
-        <button type='button' onClick={toggleBtn}>
+        <button type='button' title='open filter' onClick={toggleBtn}>
           <FilterIcon color='#fdfdfd' />
         </button>
       </div>
       <div className='filter__mobile-content' data-filter={open}>
-        <button type='button' onClick={toggleBtn}>{xIcon}</button>
+        <button type='button' title='close filter' onClick={toggleBtn}>
+          {xIcon}
+        </button>
         <ul className='container padding w-full'>
           <li>
-            <Link href={'/products'} onClick={toggleBtn}>All</Link>
+            <LinkActive url='products' name='All' click={toggleBtn} />
           </li>
           {items.map((i, idx) => (
             <li key={idx}>
-              <LinkActive url={i} click={toggleBtn} />
+              <LinkActive url={`products/category/${i}`} click={toggleBtn} />
             </li>
           ))}
         </ul>

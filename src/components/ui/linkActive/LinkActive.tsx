@@ -1,27 +1,31 @@
 'use client'
+import { MouseEventHandler } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { formatedString } from "@/lib/formatedString";
-import { MouseEventHandler } from "react";
+
 import './style.css'
 
 /** Link active */
 export default function LinkActive({
   url,
+  name,
   click
 }: {
   url: string,
+  name?: string,
   click?: MouseEventHandler
 }) {
   const pathname = usePathname()
+  const newName = url.split('/').reverse()[0]
 
   const path = pathname.split('/').reverse()[0]
-  const nameFormated = formatedString(url)
+  const nameFormated = name ?? formatedString(newName)
 
   return (
     <Link
-      href={`/products/category/${url}`}
-      data-active={url == path ? true : false}
+      href={`/${url}`}
+      data-category-active={newName == path}
       onClick={click}
     >
       {nameFormated}

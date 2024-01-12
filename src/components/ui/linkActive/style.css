@@ -1,3 +1,10 @@
-a[data-acive=true] {
-  color: var(--primary);
+a[data-category-active] {
+  padding: 2px 8px;
+}
+
+a[data-category-active=true] {
+  display: block;
+  color: var(--terciary);
+  background-color: var(--primary);
+  border-radius: var(--border);
 }

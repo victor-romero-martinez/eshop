@@ -11,3 +11,9 @@ export type Product = {
   thumbnail: string;
   images: string[];
 };
+
+export type TPagination = {
+  total: number;
+  skip: number;
+  limit: number;
+};

@@ -2,7 +2,6 @@
 .filter__mobile-content {
   background-color: var(--terciary);
   display: flex;
-  place-items: center;
   position: fixed;
 }
 
@@ -16,19 +15,21 @@
 }
 
 .filter__mobile-content {
-  display: flex;
-  align-items: center;
   visibility: hidden;
+  min-height: 100vh;
+  align-items: center;
   color: #fdfdfd;
+  top: 300px;
+  left: 0;
+  opacity: 0;
+  transition: .3s all ease-out;
+  z-index: 40;
 }
 
 .filter__mobile-content[data-filter=true] {
   visibility: visible;
-  width: 100%;
-  min-height: 100vh;
   top: 0;
-  left: 0;
-  z-index: 40;
+  opacity: 1;
 }
 
 .filter__mobile-content button {
@@ -36,6 +37,17 @@
   position: absolute;
   top: 34px;
   right: 22px;
+}
+
+.filter__mobile-content ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .8rem;
+}
+
+.filter__mobile-content a[data-category-active] {
+  display: inline;
 }
 
 @media (width > 499px) {
