@@ -1,9 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { menuIcon, searchIcon, shoppingCart, xIcon } from "./icons";
+import CartView from "@/components/cartView/CartView";
+import CartViewMobile from "@/components/catViewMobile/CartViewMobile";
+import { useUIStore } from "@/store/uiStore";
+import { useUIShopStore } from "@/store/shopStore";
 
 import "./style.css";
 
@@ -12,14 +15,13 @@ import "./style.css";
  * @param {{name: string, url: string}[]} props.links - Array of element
  */
 function Navbar({ links }) {
-  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const cartState = useUIShopStore((state) => state.shopingCart);
 
-  /** hanble menu open or close on mobile device */
-  const menuHandle = () => setIsOpen((prev) => !prev);
-
-  /** close nav-bar only on mobile */
-  const colseNavOnMobile = () => setIsOpen(false);
+  const isOpenNav = useUIStore((state) => state.navBar);
+  const isOpenCart = useUIStore((state) => state.cart);
+  const toggleMenu = useUIStore((state) => state.toogleNavbar);
+  const toggleCart = useUIStore((state) => state.toogleCart);
 
   return (
     <div className="navbar">
@@ -29,7 +31,7 @@ function Navbar({ links }) {
             <ul className="navbar__inner">
               {links.map((l) => (
                 <li key={l.url}>
-                  <a href={l.url} data-active={pathname === l.url}>
+                  <a href={l.url} data-active={pathname.includes(l.url)}>
                     {l.name}
                   </a>
                 </li>
@@ -37,24 +39,24 @@ function Navbar({ links }) {
             </ul>
           </nav>
         </div>
-        <div className="mobile" data-open={isOpen}>
+        <div className="mobile" data-open={isOpenNav}>
           <nav>
             <button
               title="close navBar"
               type="button"
               className="navBar__Btn__hidden"
-              onClick={colseNavOnMobile}
+              onClick={toggleMenu}
             >
               {xIcon}
             </button>
             <div className="navbar__hidden">
-              <div onClick={colseNavOnMobile}></div>
+              <div onClick={toggleMenu}></div>
               <ul className="navbar__inner">
                 {links.map((l) => (
                   <li key={l.url}>
                     <Link
                       href={l.url}
-                      onClick={colseNavOnMobile}
+                      onClick={toggleMenu}
                       data-active={pathname === l.url}
                     >
                       {l.name}
@@ -67,21 +69,41 @@ function Navbar({ links }) {
         </div>
       </div>
       <div className="left">
-        <button type="button" title="search" className="Btn touch">
-          {searchIcon}
-        </button>
-        <button type="button" title="shopping cart" className="Btn touch">
-          {shoppingCart}
-        </button>
+        <div>
+          <button type="button" title="search" className="Btn touch">
+            {searchIcon}
+          </button>
+        </div>
+
+        <div className="cart__conatiner">
+          <button
+            type="button"
+            title="shopping cart"
+            className="Btn touch"
+            onClick={toggleCart}
+          >
+            {shoppingCart}
+          </button>
+
+          <div className="cart__container-inner" data-open-cart={isOpenCart}>
+            <CartView items={cartState} />
+          </div>
+        </div>
         <button
           title="open navBar"
           type="button"
           className="navBar__Btn Btn touch"
-          onClick={menuHandle}
+          onClick={toggleMenu}
         >
           {menuIcon}
         </button>
       </div>
+
+      <CartViewMobile
+        items={cartState}
+        click={toggleCart}
+        status={isOpenCart}
+      />
     </div>
   );
 }

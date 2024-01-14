@@ -1,0 +1,37 @@
+.cart__mobile {
+  color: #fff;
+  background-color: var(--terciary);
+  visibility: hidden;
+  width: 100%;
+  min-height: 100svh;
+  position: fixed;
+  top: 200px;
+  left: 0;
+  opacity: 0;
+  transition: .2s ease-in;
+}
+
+.cart__mobile[data-onmobile-cart=true] {
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+}
+
+.cart__mobile-xicon {
+  color: #fff;
+  position: absolute;
+  top: 34px;
+  right: 24px;
+}
+
+.cart__mobile-inner {
+  position: absolute;
+  top: 80px;
+}
+
+
+@media (width > 499px) {
+  .cart__mobile {
+    display: none;
+  }
+}

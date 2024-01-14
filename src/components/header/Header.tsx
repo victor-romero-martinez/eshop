@@ -5,7 +5,7 @@ import Image from "next/image";
 import './style.css'
 
 const navLink = [
-  { url: '/', name: 'home' },
+  { url: '/home', name: 'home' },
   { url: '/products', name: 'products' },
   { url: '/blog', name: 'blog' },
 ]

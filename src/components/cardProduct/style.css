@@ -41,11 +41,6 @@
   margin-top: 14px;
 }
 
-.card__product-price button {
-  cursor: pointer;
-  transition: .2s;
-}
-
 .price {
   margin-top: 10px;
 }

@@ -1,4 +1,4 @@
-import { DollarIcon, StarIcon } from "@/components/icons/icons";
+import { DollarIcon, ShoppingBagIcon, StarIcon } from "@/components/icons/icons";
 import Badges from "@/components/ui/badges/Badges";
 import { Product } from "@/definitions/type";
 import { getData } from "@/lib/getFetch";
@@ -7,6 +7,7 @@ import Btn from "@/components/ui/Btnbtn/Btn";
 import { Metadata } from "next";
 
 import './style.css'
+import BtnAddToCart from "@/components/ui/btnAddToCart/BtnAddToCart";
 
 export const metadata: Metadata = {
   title: 'Product'
@@ -49,11 +50,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                   <strong>{product.price}</strong>
                 </span>)}
             </p>
-            <Btn type="button" styles={{
-              color: '#fff',
-              backgroundColor: 'var(--primary)',
-              cursor: 'pointer'
-            }}>Buy</Btn>
+            <BtnAddToCart item={product} />
           </div>
         </div>
       </article>

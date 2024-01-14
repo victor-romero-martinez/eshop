@@ -1,7 +1,7 @@
 'use client'
 
 import Badges from '@/components/ui/badges/Badges'
-import { DollarIcon, ShoppingBagIcon } from '../icons/icons'
+import { DollarIcon } from '../icons/icons'
 import { useRouter } from 'next/navigation'
 
 import './style.css'
@@ -13,23 +13,17 @@ export default function CardProduct({
   description,
   price,
   discountPercentage,
-  rating,
-  stock,
   brand,
   category,
-  thumbnail,
   images,
 }: {
   id: string | number
-  title?: string,
-  description?: string,
+  title: string,
+  description: string,
   price: number,
-  discountPercentage?: number,
-  rating?: number,
-  stock?: number,
-  brand?: string,
-  category?: string,
-  thumbnail?: string,
+  discountPercentage: number,
+  brand: string,
+  category: string,
   images: string[]
 }) {
   const router = useRouter();
@@ -61,9 +55,6 @@ export default function CardProduct({
           (<span>
             <strong>{price}</strong>
           </span>)}
-        <button type='button' title='Add to cart'>
-          <ShoppingBagIcon />
-        </button>
       </p>
     </article>
   )

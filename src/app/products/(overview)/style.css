@@ -4,7 +4,7 @@
 }
 
 .product__filter {
-  min-width: 160px;
+  min-width: 180px;
   display: none;
   position: sticky;
   margin-top: 48px;

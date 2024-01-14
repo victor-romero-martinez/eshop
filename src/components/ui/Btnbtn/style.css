@@ -1,7 +1,10 @@
 .btn__style {
   width: fit-content;
   height: fit-content;
-  background-color: white;
+  background-color: ghostwhite;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 4px 14px;
   border-radius: 20vmax;
   position: relative;
@@ -21,6 +24,10 @@
   position: absolute;
   z-index: -10;
   transition: .2s all;
+}
+
+.btn__style:hover {
+  color: #fff;
 }
 
 .btn__style:hover::before {
