@@ -32,6 +32,22 @@ p {
   cursor: pointer;
 }
 
+.cart__container__item-empty,
+.cart__container__item-empty>span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart__container__item-empty {
+  height: 100%;
+}
+
+.cart__container__item-empty span {
+  flex-direction: column;
+}
+
+
 @media (hover:hover) {
   .cart__container__item:hover {
     background-color: #00000020;
