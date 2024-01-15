@@ -40,7 +40,7 @@ const st = {
   width: 'fit-content',
   height: 'fit-content',
   backgroundColor: 'var(--secondary)',
-  'font-size': 'var(--font-sm)',
+  fontSize: 'var(--font-sm)',
   display: 'inline-flex',
   alignItems: 'center',
   gap: '8px',

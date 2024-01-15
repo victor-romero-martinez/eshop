@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import { Poppins } from 'next/font/google'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
@@ -19,6 +20,8 @@ export const metadata: Metadata = {
   openGraph: { images: 'opengraph-image.webp' }
 }
 
+// const NoSSRHeader = dynamic(() => import('@/components/header/Header'), { ssr: false })
+
 export default function RootLayout({
   children,
 }: {
@@ -27,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
+        {/* <NoSSRHeader /> */}
         <Header />
         {children}
         <Footer />
