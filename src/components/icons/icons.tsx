@@ -256,6 +256,19 @@ const TrashIcon = ({ ...props }) => (
     {...props}><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7h16" /><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" /><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /><path d="M10 12l4 4m0 -4l-4 4" /></svg>
 )
 
+const BagCheckIcon = ({ ...props }) => (
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M11.5 21h-2.926a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304h11.339a2 2 0 0 1 1.977 2.304l-.5 3.248" /><path d="M9 11v-5a3 3 0 0 1 6 0v5" /><path d="M15 19l2 2l4 -4" /></svg>
+)
+
 
 export {
   GuaranteeIcon,
@@ -269,6 +282,7 @@ export {
   MailIcon,
   MapPinIcon,
   ShoppingBagIcon,
+  BagCheckIcon,
   DollarIcon,
   StarIcon,
   FilterIcon,

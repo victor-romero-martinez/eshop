@@ -83,6 +83,9 @@ function Navbar({ links }) {
             onClick={toggleCart}
           >
             {shoppingCart}
+            {cartState.length > 0 && (
+              <span className="cart__counter">{cartState.length}</span>
+            )}
           </button>
 
           <div className="cart__container-inner" data-open-cart={isOpenCart}>

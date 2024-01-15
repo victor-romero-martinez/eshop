@@ -1,4 +1,4 @@
-footer {
+.footer {
   display: grid;
   grid-template-areas:
     'subsc'
@@ -72,7 +72,7 @@ footer {
 }
 
 @media (width > 600px) {
-  footer {
+  .footer {
     grid-template-areas:
       'subsc contact'
       'social social';
@@ -80,7 +80,7 @@ footer {
 }
 
 @media (width > 1200px) {
-  footer {
+  .footer {
     grid-template-areas: 'social contact subsc';
     grid-template-columns: repeat(3, 1fr);
   }

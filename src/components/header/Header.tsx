@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container__header container padding">
-        <Link href='/' className='logo'>
+        <Link href='/home' className='logo'>
           <Image src='/logo.webp' alt="phlox logo" width={128} height={49} priority />
         </Link>
         <Navbar links={navLink} />
