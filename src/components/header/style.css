@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   margin: auto;
+  padding-block: 16px;
 }
 
 .logo {

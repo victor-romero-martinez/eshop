@@ -16,7 +16,7 @@
 
 .filter__mobile-content {
   visibility: hidden;
-  min-height: 100vh;
+  min-height: 100%;
   align-items: center;
   color: #fdfdfd;
   top: 200px;

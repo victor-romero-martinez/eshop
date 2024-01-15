@@ -39,7 +39,7 @@ function Navbar({ links }) {
             </ul>
           </nav>
         </div>
-        <div className="mobile" data-open={isOpenNav}>
+        <div className="mobile" data-open-nav={isOpenNav}>
           <nav>
             <button
               title="close navBar"

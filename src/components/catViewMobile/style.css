@@ -3,7 +3,7 @@
   background-color: var(--terciary);
   visibility: hidden;
   width: 100%;
-  min-height: 100svh;
+  min-height: 100%;
   position: fixed;
   top: 200px;
   left: 0;

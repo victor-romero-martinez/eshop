@@ -6,8 +6,7 @@
 }
 
 .card__news picture {
-  width: 320px;
-  height: 240px;
+  max-width: 320px;
   overflow: hidden;
   border-radius: var(--border);
 }
