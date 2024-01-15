@@ -5,9 +5,9 @@ import { getData } from "@/lib/getFetch";
 import ImageViewer from "@/components/imageViewer/ImageViewer";
 import Btn from "@/components/ui/Btnbtn/Btn";
 import { Metadata } from "next";
+import BtnAddToCart from "@/components/ui/btnAddToCart/BtnAddToCart";
 
 import './style.css'
-import BtnAddToCart from "@/components/ui/btnAddToCart/BtnAddToCart";
 
 export const metadata: Metadata = {
   title: 'Product'

@@ -136,6 +136,16 @@ a[data-active="true"] {
   visibility: visible;
 }
 
+.cart__counter {
+  width: 14px;
+  height: 14px;
+  background-color: var(--primary);
+  font-size: var(--font-sm);
+  border-radius: 50%;
+  position: absolute;
+  right: 3px;
+}
+
 .cart__container-inner {
   width: 300px;
   height: 400px;
