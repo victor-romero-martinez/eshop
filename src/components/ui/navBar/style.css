@@ -104,7 +104,6 @@ a[data-active="true"] {
 
 .navbar__inner li {
   list-style: none;
-  opacity: .8;
   transition: .2s;
 }
 
@@ -167,7 +166,6 @@ a[data-active="true"] {
 
 @media (hover:hover) {
   .navbar__inner li:hover {
-    opacity: 1;
     transform: scale(1.1);
   }
 

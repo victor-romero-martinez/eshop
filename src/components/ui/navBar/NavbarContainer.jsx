@@ -3,7 +3,6 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
 import { menuIcon, searchIcon, shoppingCartIcon, xIcon } from "./icons";
 import { useUIStore } from "@/store/uiStore";
 
@@ -83,9 +82,7 @@ function Navbar({ links }) {
           </button>
         </div>
 
-        <Suspense fallback={<CartPlaceholder />}>
-          <NoSRRcart />
-        </Suspense>
+        <NoSRRcart placeholder={CartPlaceholder} />
 
         <button
           title="open navBar"

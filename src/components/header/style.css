@@ -9,8 +9,8 @@
 .container__header {
   display: flex;
   align-items: center;
-  margin: auto;
   padding-block: 16px;
+  gap: 16px;
 }
 
 .logo {
