@@ -33,7 +33,7 @@ const xIcon = (
   </svg>
 );
 
-const shoppingCart = (
+const shoppingCartIcon = (
   <svg
     width="24"
     height="24"
@@ -67,4 +67,4 @@ const searchIcon = (
   </svg>
 );
 
-export { menuIcon, xIcon, shoppingCart, searchIcon };
+export { menuIcon, xIcon, shoppingCartIcon, searchIcon };

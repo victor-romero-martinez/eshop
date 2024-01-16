@@ -3,7 +3,7 @@ import type { Product } from "@/definitions/type";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 type TCartSate = {
-  shopingCart: Product[];
+  shoppingCart: Product[];
 };
 
 type TCartAction = {
@@ -14,16 +14,16 @@ type TCartAction = {
 export const useUIShopStore = create<TCartSate & TCartAction>()(
   persist(
     (set) => ({
-      shopingCart: [],
+      shoppingCart: [],
 
       addToCart: (item) =>
         set((state) => ({
-          shopingCart: [...state.shopingCart, item],
+          shoppingCart: [...state.shoppingCart, item],
         })),
 
       removeToCart: (id) =>
         set((state) => ({
-          shopingCart: state.shopingCart.filter((i) => i.id !== id),
+          shoppingCart: state.shoppingCart.filter((i) => i.id !== id),
         })),
     }),
     {

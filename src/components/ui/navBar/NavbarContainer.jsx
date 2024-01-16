@@ -2,13 +2,23 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { menuIcon, searchIcon, shoppingCart, xIcon } from "./icons";
-import CartView from "@/components/cartView/CartView";
-import CartViewMobile from "@/components/catViewMobile/CartViewMobile";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+import { menuIcon, searchIcon, shoppingCartIcon, xIcon } from "./icons";
 import { useUIStore } from "@/store/uiStore";
-import { useUIShopStore } from "@/store/shopStore";
 
 import "./style.css";
+
+const NoSRRcart = dynamic(() => import("./nsSRR/Cart"), {
+  ssr: false,
+});
+
+const NoSRRcartOnMobile = dynamic(
+  () => import("@/components/catViewMobile/CartViewMobile"),
+  {
+    ssr: false,
+  }
+);
 
 /** NavBar responsive component
  * @param {Object} props
@@ -16,12 +26,10 @@ import "./style.css";
  */
 function Navbar({ links }) {
   const pathname = usePathname();
-  const cartState = useUIShopStore((state) => state.shopingCart);
 
   const isOpenNav = useUIStore((state) => state.navBar);
-  const isOpenCart = useUIStore((state) => state.cart);
-  const toggleMenu = useUIStore((state) => state.toogleNavbar);
-  const toggleCart = useUIStore((state) => state.toogleCart);
+  const toggleMenu = useUIStore((state) => state.toggleNavbar);
+  const toggleCartIsOpen = useUIStore((state) => state.toggleCart);
 
   return (
     <div className="navbar">
@@ -75,23 +83,10 @@ function Navbar({ links }) {
           </button>
         </div>
 
-        <div className="cart__conatiner">
-          <button
-            type="button"
-            title="shopping cart"
-            className="Btn touch"
-            onClick={toggleCart}
-          >
-            {shoppingCart}
-            {cartState.length > 0 && (
-              <span className="cart__counter">{cartState.length}</span>
-            )}
-          </button>
+        <Suspense fallback={<CartPlaceholder />}>
+          <NoSRRcart />
+        </Suspense>
 
-          <div className="cart__container-inner" data-open-cart={isOpenCart}>
-            <CartView items={cartState} />
-          </div>
-        </div>
         <button
           title="open navBar"
           type="button"
@@ -102,12 +97,13 @@ function Navbar({ links }) {
         </button>
       </div>
 
-      <CartViewMobile
-        items={cartState}
-        click={toggleCart}
-        status={isOpenCart}
-      />
+      <NoSRRcartOnMobile click={toggleCartIsOpen} />
     </div>
   );
 }
+
 export default Navbar;
+
+function CartPlaceholder() {
+  return shoppingCartIcon;
+}

@@ -5,7 +5,7 @@ import { Product } from "@/definitions/type"
 import { useUIShopStore } from "@/store/shopStore"
 
 export default function BtnAddToCart({ item }: { item: Product }) {
-  const cartState = useUIShopStore(state => state.shopingCart)
+  const cartState = useUIShopStore(state => state.shoppingCart)
   const add = useUIShopStore(state => state.addToCart);
 
   const addToCart = () => add(item)

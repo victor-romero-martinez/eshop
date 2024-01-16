@@ -7,7 +7,7 @@ import './style.css'
 
 
 export default function CartView({ items }: { items: Product[] }) {
-  const { shopingCart } = useUIShopStore()
+  const { shoppingCart: shopingCart } = useUIShopStore()
   const { removeToCart } = useUIShopStore()
 
   const handleRemove = (id: string | number) => removeToCart(id)

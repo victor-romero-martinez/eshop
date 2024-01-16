@@ -4,14 +4,14 @@ type isOpen = {
   navBar: boolean;
   cart: boolean;
 
-  toogleCart: () => void;
-  toogleNavbar: () => void;
+  toggleCart: () => void;
+  toggleNavbar: () => void;
 };
 
 export const useUIStore = create<isOpen>()((set) => ({
   cart: false,
   navBar: false,
 
-  toogleCart: () => set((state) => ({ cart: !state.cart })),
-  toogleNavbar: () => set((state) => ({ navBar: !state.navBar })),
+  toggleCart: () => set((state) => ({ cart: !state.cart })),
+  toggleNavbar: () => set((state) => ({ navBar: !state.navBar })),
 }));
