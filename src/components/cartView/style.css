@@ -1,13 +1,19 @@
-.cart__container__item {
+.cart__container__item,
+.cart__container__item-inner {
   display: inline-flex;
+  justify-content: center;
+}
+
+.cart__container__item {
   align-items: center;
+  margin-top: 8px;
 }
 
 .cart__container__item-inner {
-  display: inline-flex;
   padding-right: 20px;
 }
 
+.cart__container__item-child,
 .cart__container__item-details {
   flex: 1;
 }
@@ -49,6 +55,10 @@ p {
 
 
 @media (hover:hover) {
+  .button__buy button:hover {
+    background-color: #06e415a9;
+  }
+
   .cart__container__item:hover {
     background-color: #00000020;
   }

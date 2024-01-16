@@ -2,9 +2,9 @@ import { MouseEventHandler } from 'react'
 import { xIcon } from '../ui/navBar/icons'
 import CartView from '../cartView/CartView'
 import { useUIShopStore } from '@/store/shopStore'
+import { useUIStore } from '@/store/uiStore'
 
 import './style.css'
-import { useUIStore } from '@/store/uiStore'
 
 export default function CartViewMobile({ click }: { click?: MouseEventHandler }) {
   const { cart } = useUIStore()

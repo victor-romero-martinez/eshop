@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Product } from '@/definitions/type'
-import { BagEmptyIcon, DollarIcon, TrashIcon } from '../icons/icons'
+import { BagCheckIcon, BagEmptyIcon, DollarIcon, TrashIcon } from '../icons/icons'
 import { useUIShopStore } from '@/store/shopStore'
 
 import './style.css'

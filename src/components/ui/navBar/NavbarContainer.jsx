@@ -10,6 +10,7 @@ import "./style.css";
 
 const NoSRRcart = dynamic(() => import("./nsSRR/Cart"), {
   ssr: false,
+  loading: () => <CartPlaceholder />,
 });
 
 const NoSRRcartOnMobile = dynamic(
@@ -82,7 +83,7 @@ function Navbar({ links }) {
           </button>
         </div>
 
-        <NoSRRcart placeholder={CartPlaceholder} />
+        <NoSRRcart />
 
         <button
           title="open navBar"
@@ -102,5 +103,5 @@ function Navbar({ links }) {
 export default Navbar;
 
 function CartPlaceholder() {
-  return shoppingCartIcon;
+  return <button type="button">{shoppingCartIcon}</button>;
 }
