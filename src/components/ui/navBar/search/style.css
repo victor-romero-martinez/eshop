@@ -1,0 +1,32 @@
+.search {
+  position: relative;
+}
+
+.search-input {
+  max-width: 100px;
+  padding: 4px 12px 4px 24px;
+  border-radius: 20vmax;
+}
+
+.search-btn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px 0 0 12px;
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+}
+
+.search-input:focus,
+.search-input:active {
+  outline: none;
+}
+
+@media (hover:hover) {
+  .search-btn:hover {
+    background-color: #76767250;
+  }
+}

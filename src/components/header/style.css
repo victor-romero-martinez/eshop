@@ -13,6 +13,12 @@
   gap: 16px;
 }
 
-.logo {
-  text-align: center;
+.logo-img {
+  transform: scale(.7);
+}
+
+@media (width > 399px) {
+  .logo-img {
+    transform: scale(1);
+  }
 }

@@ -3,8 +3,9 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { menuIcon, searchIcon, shoppingCartIcon, xIcon } from "./icons";
+import { menuIcon, shoppingCartIcon, xIcon } from "./icons";
 import { useUIStore } from "@/store/uiStore";
+import SearchInput from "./search/Search";
 
 import "./style.css";
 
@@ -77,10 +78,8 @@ function Navbar({ links }) {
         </div>
       </div>
       <div className="left">
-        <div>
-          <button type="button" title="search" className="Btn touch">
-            {searchIcon}
-          </button>
+        <div className="Btn touch">
+          <SearchInput />
         </div>
 
         <NoSRRcart />
@@ -103,5 +102,9 @@ function Navbar({ links }) {
 export default Navbar;
 
 function CartPlaceholder() {
-  return <button type="button">{shoppingCartIcon}</button>;
+  return (
+    <button type="button" className="Btn touch">
+      {shoppingCartIcon}
+    </button>
+  );
 }

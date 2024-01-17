@@ -3,7 +3,6 @@ import Badges from "@/components/ui/badges/Badges";
 import { Product } from "@/definitions/type";
 import { getData } from "@/lib/getFetch";
 import ImageViewer from "@/components/imageViewer/ImageViewer";
-import Btn from "@/components/ui/Btnbtn/Btn";
 import { Metadata } from "next";
 import BtnAddToCart from "@/components/ui/btnAddToCart/BtnAddToCart";
 

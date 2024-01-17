@@ -50,10 +50,10 @@ const shoppingCartIcon = (
   </svg>
 );
 
-const searchIcon = (
+const SearchIcon = ({ size = "24" }) => (
   <svg
-    width="24"
-    height="24"
+    width={size}
+    height={size}
     viewBox="0 0 24 24"
     strokeWidth="2"
     stroke="currentColor"
@@ -67,4 +67,4 @@ const searchIcon = (
   </svg>
 );
 
-export { menuIcon, xIcon, shoppingCartIcon, searchIcon };
+export { menuIcon, xIcon, shoppingCartIcon, SearchIcon };

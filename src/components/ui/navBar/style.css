@@ -114,8 +114,7 @@ a[data-active="true"] {
 
 /* left */
 .left {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
   column-gap: 16px;
   font-size: 1rem;
 }
@@ -164,7 +163,6 @@ a[data-active="true"] {
 }
 
 .touch {
-  opacity: .8;
   cursor: pointer;
   transition: all .2s ease-in-out;
 }
@@ -175,7 +173,6 @@ a[data-active="true"] {
   }
 
   .touch:hover {
-    opacity: 1;
     transform: scale(1.1);
   }
 }

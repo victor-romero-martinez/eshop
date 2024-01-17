@@ -65,7 +65,7 @@
 
 .subscription label button {
   color: #ffffff;
-  background-color: #f82a36;
+  background-color: var(--primary);
   cursor: pointer;
   border-radius: 20px;
   padding: 8px 12px;

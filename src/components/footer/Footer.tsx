@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="subscription">
           <h3>Subscribe To Our Email</h3>
           <h2>For Latest News & Updates</h2>
-          <label htmlFor="email">
+          <label htmlFor="subsc">
             <input type="email" name="subsc" id="subsc" placeholder='Email' />
             <Btn type="submit">Subscribe</Btn>
           </label>
