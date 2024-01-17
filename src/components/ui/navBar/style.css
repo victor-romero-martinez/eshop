@@ -153,14 +153,13 @@ a[data-active="true"] {
   box-shadow: 10px 5px 10px #70809050;
   border-radius: 0 0 var(--border) var(--border);
   position: absolute;
-  right: -200px;
+  right: 0;
   top: 60px;
   opacity: 0;
   transition: .2s all ease-out;
 }
 
 .cart__container-inner[data-open-cart=true] {
-  right: 0;
   opacity: 1;
 }
 

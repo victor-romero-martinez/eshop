@@ -29,6 +29,13 @@
   top: 80px;
 }
 
+.cart__mobile-buy__btn {
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 16px;
+}
+
 
 @media (width > 499px) {
   .cart__mobile {

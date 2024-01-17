@@ -46,18 +46,20 @@ export default function NavComp() {
                 left: "0",
               }}
             >
-              <Btn
-                type="button"
-                styles={{
-                  backgroundColor: "var(--primary)",
-                  fontSize: "var(--font-lg)",
-                  width: "100px",
-                  justifyContent: "center",
-                  cursor: "pointer",
-                }}
-              >
-                Buy
-              </Btn>
+              {shoppingCart.length > 0 && (
+                <Btn
+                  type="button"
+                  styles={{
+                    backgroundColor: "var(--primary)",
+                    fontSize: "var(--font-lg)",
+                    width: "100px",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                  }}
+                >
+                  Buy
+                </Btn>
+              )}
             </div>
           </div>
         </div>
