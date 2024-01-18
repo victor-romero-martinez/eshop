@@ -11,14 +11,18 @@ type Data = Products & TPagination
 
 export default async function Page({ searchParams }: {
   searchParams?: {
+    category: string,
     limit: string,
     skip: string
   }
 }) {
   const limit = searchParams?.limit ?? 16;
   const skip = searchParams?.skip ?? 0;
+  const category = searchParams?.category;
 
-  const data = await getData<Data>(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`)
+  const ulrFecht = category ? `/category/${category}` : `?limit=${limit}&skip=${skip}`
+
+  const data = await getData<Data>(`https://dummyjson.com/products${ulrFecht}`)
 
 
   const pages = paginationSplit({

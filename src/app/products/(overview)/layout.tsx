@@ -26,7 +26,8 @@ export default async function Page({ children }: { children: React.ReactNode }) 
             </li>
             {categories.map((c, i) => (
               <li key={i}>
-                <LinkActive url={`products/category/${c}`} />
+                <LinkActive url={`products?category=${c}`} />
+                {/* <LinkActive url={`products/category/${c}`} /> */}
               </li>
             ))}
           </ul>

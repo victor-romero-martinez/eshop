@@ -6,7 +6,7 @@ export default function CategorySection() {
     <section className="container grid padding">
       <div className="card__container a">
         <Card
-          url="/products/category/smartphones"
+          url="/products?category=smartphones"
           text="Enjoy"
           title="With"
           backgroundText="smatphone"
@@ -17,7 +17,7 @@ export default function CategorySection() {
       </div>
       <div className="card__container b">
         <Card
-          url="/products/category/mens-watches"
+          url="/products?category=mens-watches"
           text="New"
           title="Wear"
           backgroundText="gadgets"
@@ -28,7 +28,7 @@ export default function CategorySection() {
       </div>
       <div className="card__container c">
         <Card
-          url="/products/category/laptops"
+          url="/products?category=laptops"
           text="Triend"
           title="Device"
           backgroundText="laptops"
@@ -39,7 +39,7 @@ export default function CategorySection() {
       </div>
       <div className="card__container d">
         <Card
-          url="/products/category/fragrances"
+          url="/products?category=fragrances"
           text="Best"
           title="Fresh"
           backgroundText="fragrances"
@@ -50,7 +50,7 @@ export default function CategorySection() {
       </div>
       <div className="card__container e">
         <Card
-          url="/products/category/sunglasses"
+          url="/products?category=sunglasses"
           text="good"
           title="Day"
           backgroundText="sunglasses"
@@ -61,7 +61,7 @@ export default function CategorySection() {
       </div>
       <div className="card__container f">
         <Card
-          url="/products/category/womens-bags"
+          url="/products?category=womens-bags"
           text="New"
           title="With"
           backgroundText="bags"

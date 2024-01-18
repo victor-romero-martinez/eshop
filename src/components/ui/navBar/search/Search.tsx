@@ -14,8 +14,9 @@ export default function SearchInput() {
       <div className="search">
         <input
           type="search"
-          placeholder="Search"
+          placeholder="Alt + s"
           maxLength={8}
+          accessKey="s"
           className="search-input"
           value={url}
           onChange={(e) => setUrl(e.target.value)}

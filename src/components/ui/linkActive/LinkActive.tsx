@@ -1,7 +1,7 @@
 'use client'
 import { MouseEventHandler } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { formatedString } from "@/lib/formatedString";
 
 import './style.css'
@@ -16,16 +16,17 @@ export default function LinkActive({
   name?: string,
   click?: MouseEventHandler
 }) {
-  const pathname = usePathname()
-  const newName = url.split('/').reverse()[0]
+  const pathname = useSearchParams()
 
-  const path = pathname.split('/').reverse()[0]
-  const nameFormated = name ?? formatedString(newName)
+  const nameurl = url.split('=')[1]
+  const query = pathname.get('category')
+
+  const nameFormated = name ?? formatedString(nameurl)
 
   return (
     <Link
       href={`/${url}`}
-      data-category-active={newName == path}
+      data-category-active={query == nameurl}
       onClick={click}
     >
       {nameFormated}
