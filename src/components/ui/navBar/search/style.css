@@ -8,6 +8,10 @@
   border-radius: 20vmax;
 }
 
+.search-input:invalid {
+  background-color: #ff000030;
+}
+
 .search-btn {
   width: 24px;
   height: 24px;
