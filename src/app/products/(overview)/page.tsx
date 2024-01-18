@@ -2,6 +2,7 @@ import { getData } from "@/lib/getFetch";
 import type { Product, TPagination } from "@/definitions/type";
 import ProductsViewer from "@/components/productsViewer/ProductViewer";
 import { paginationSplit } from "@/lib/paginatioFn";
+import { CSSProperties } from "react";
 
 type Products = {
   products: Product[]
@@ -24,13 +25,25 @@ export default async function Page({ searchParams }: {
 
   const data = await getData<Data>(`https://dummyjson.com/products${ulrFecht}`)
 
-
   const pages = paginationSplit({
     total: data.total,
     limit: Number(limit),
   });
 
   return (
-    <ProductsViewer products={data.products} pagination={pages} />
+    <>
+      {data.products.length > 0 ? (
+        <ProductsViewer products={data.products} pagination={pages} />
+      ) : (
+        <div className="w-full" style={st}>
+          <h2>No request match :(</h2>
+        </div>
+      )}
+    </>
   )
 };
+
+const st: CSSProperties = {
+  display: 'grid',
+  placeItems: 'center',
+}

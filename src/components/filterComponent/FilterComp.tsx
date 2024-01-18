@@ -30,7 +30,7 @@ export default function FilterComponent({ items }: { items: string[] }) {
           </li>
           {items.map((i, idx) => (
             <li key={idx}>
-              <LinkActive url={`products/category/${i}`} click={toggleBtn} />
+              <LinkActive url={`products?category=${i}`} click={toggleBtn} />
             </li>
           ))}
         </ul>
