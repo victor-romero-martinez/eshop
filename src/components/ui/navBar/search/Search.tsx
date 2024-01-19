@@ -8,12 +8,6 @@ export default function SearchInput() {
   const route = useRouter()
   const [url, setUrl] = useState('')
 
-  document.addEventListener('keyup', function (event) {
-    if (event.keyCode === 13) {
-      submit();
-    }
-  });
-
   function submit() {
     route.push(`search?q=${url}`)
     reset()
@@ -22,6 +16,12 @@ export default function SearchInput() {
   function reset() {
     return setUrl('')
   }
+
+  document.addEventListener('keyup', function (event) {
+    if (event.keyCode === 13) {
+      submit();
+    }
+  });
 
   return (
     <div className="search">
