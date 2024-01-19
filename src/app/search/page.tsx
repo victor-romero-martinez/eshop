@@ -22,11 +22,6 @@ export default async function Page({ searchParams }: {
 
   const data = await getData<TData>(`https://dummyjson.com/products/search?q=${search}`)
 
-  const pages = paginationSplit({
-    total: data.total,
-    limit: data.limit,
-  });
-
   return (
     <>
       {data.products.length > 0 ? (
