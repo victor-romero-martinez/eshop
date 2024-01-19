@@ -29,7 +29,6 @@ export default function SearchInput() {
           type="submit"
           title="search"
           className="search-btn"
-        // onClick={submit}
         >
           {<SearchIcon size="16" />}
         </button>

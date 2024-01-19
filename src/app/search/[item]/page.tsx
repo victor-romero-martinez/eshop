@@ -28,7 +28,7 @@ export default async function Page({ params }: {
     <>
       {data.products.length > 0 ? (
         <main className="container padding">
-          <h1>Result for <span>{search}</span></h1>
+          <h1>Result for &quot;{search}&quot;</h1>
           <section className="products-view">
             {data.products.map(p => (
               <CardProduct key={p.id} {...p} />
@@ -37,7 +37,7 @@ export default async function Page({ params }: {
         </main>
       ) : (
         <div className="w-full container padding no-match">
-          <h2>No request match for {search} :(</h2>
+          <h2>No request match for &quot;{search}&quot; :(</h2>
         </div>
       )}
     </>
