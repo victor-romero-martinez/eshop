@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { Poppins } from 'next/font/google'
-import Header from '@/components/header/Header'
-import Footer from '@/components/footer/Footer'
 import Loading from '@/components/loading/Loading'
 
 import './globals.css'
@@ -30,11 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Header />
         <Suspense fallback={<Loading />}>
           {children}
         </Suspense>
-        <Footer />
       </body>
     </html>
   )

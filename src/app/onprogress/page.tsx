@@ -3,7 +3,7 @@ import { SettingExclamation } from "@/components/icons/icons";
 export default function Page() {
   return (
     <div className="container padding" style={{
-      minHeight: '60vh',
+      minHeight: '100vh',
       display: 'grid',
       placeItems: 'center'
     }}>

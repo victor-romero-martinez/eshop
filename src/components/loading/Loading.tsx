@@ -1,5 +1,4 @@
 import { LoadingIcon } from "../icons/icons";
-import './styles.css'
 
 export default function Loading() {
   return (

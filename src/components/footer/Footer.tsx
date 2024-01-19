@@ -6,7 +6,7 @@ import './style.css'
 
 export default function Footer() {
   return (
-    <footer className='w-full'>
+    <footer className='w-full footer-container'>
       <div className="container padding footer">
         <div className='social'>
           <Image src='/logo.webp' alt="loog" width={128} height={49} />

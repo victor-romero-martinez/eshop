@@ -1,12 +1,14 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 import FilterComponent from "@/components/filterComponent/FilterComp";
 import LinkActive from "@/components/ui/linkActive/LinkActive";
 import { getData } from "@/lib/getFetch";
+import Loading from "@/components/loading/Loading";
 
 import './style.css'
 
 export const metadata: Metadata = {
-  title: 'All products'
+  title: 'Categories'
 }
 
 type Category = string[]
@@ -33,7 +35,9 @@ export default async function Page({ children }: { children: React.ReactNode }) 
         </div>
       </aside>
       <FilterComponent items={categories} />
-      {children}
+      <Suspense fallback={<Loading />}>
+        {children}
+      </Suspense>
     </main>
   )
 };
