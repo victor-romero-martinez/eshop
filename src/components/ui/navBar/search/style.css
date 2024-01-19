@@ -6,6 +6,7 @@
   max-width: 100px;
   padding: 4px 12px 4px 24px;
   border-radius: 20vmax;
+  border-color: #80808040;
 }
 
 .search-input:invalid {

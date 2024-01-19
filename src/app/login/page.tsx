@@ -1,11 +1,12 @@
 import Btn from '@/components/ui/Btnbtn/Btn'
-import './styles.css'
 import Link from 'next/link'
+
+import './styles.css'
 
 export default function Page() {
   return (
     <main className='w-full h-vh grid__center'>
-      <div className="container padding">
+      <div className="container padding box__form ">
         <h1>Log in</h1>
 
         <form action="/">
@@ -25,11 +26,19 @@ export default function Page() {
               minLength={4}
             />
           </label>
-          <Btn>
+
+          <Btn
+            type='submit'
+            styles={{
+              backgroundColor: 'var(--primary)',
+              cursor: 'pointer'
+            }}
+          >
             Log-in
           </Btn>
         </form>
-        <span>Or
+
+        <span>Or &nbsp;
           <Link href={'register'} >
             register
           </Link>

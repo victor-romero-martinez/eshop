@@ -9,6 +9,7 @@
   --primary: #ff8811;
   --secondary: #9dd9d2;
   --terciary: #22272e;
+  --shadow: 10px 5px 10px #70809050;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

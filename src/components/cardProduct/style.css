@@ -52,7 +52,7 @@
 
 @media (hover:hover) {
   .card__product:hover {
-    box-shadow: 10px 5px 10px #70809050;
+    box-shadow: var(--shadow);
     border-radius: var(--border);
   }
 

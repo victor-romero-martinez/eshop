@@ -1,0 +1,33 @@
+.box__form {
+  min-width: 300px;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: var(--shadow);
+  border-radius: var(--border);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1em;
+}
+
+label,
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: var(--border);
+  border-color: #80808040;
+}
+
+input:focus,
+input:active {
+  outline: none;
+}
+
+.box__form span {
+  text-align: end;
+}
