@@ -4,7 +4,7 @@ import './styles.css'
 export default function Loading() {
   return (
     <div className="loader-comp">
-      <LoadingIcon width='20' height='20' />
+      <LoadingIcon width='60' height='60' className='spin' />
     </div>
   )
 };

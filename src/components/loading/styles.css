@@ -4,3 +4,13 @@
   display: grid;
   place-items: center;
 }
+
+.spin {
+  animation: spin .3s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
