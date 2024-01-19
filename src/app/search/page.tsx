@@ -1,16 +1,18 @@
-import ProductsViewer from "@/components/productsViewer/ProductViewer"
+import { Metadata } from "next"
 import { Product } from "@/definitions/type"
 import { getData } from "@/lib/getFetch"
-import { paginationSplit } from "@/lib/paginatioFn"
-import { CSSProperties } from "react"
+import CardProduct from "@/components/cardProduct/CardProduct"
 
 import './style.css'
-import CardProduct from "@/components/cardProduct/CardProduct"
 
 type TData = {
   products: Product[],
   total: number,
   limit: number
+}
+
+export const metadata: Metadata = {
+  title: "Search"
 }
 
 export default async function Page({ searchParams }: {

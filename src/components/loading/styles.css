@@ -1,0 +1,6 @@
+.loader-comp {
+  width: 100%;
+  height: 70dvh;
+  display: grid;
+  place-items: center;
+}
