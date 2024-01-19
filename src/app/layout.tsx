@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { Poppins } from 'next/font/google'
-import Loading from '@/components/loading/Loading'
+import { LoadingIcon } from '@/components/icons/icons'
 
 import './globals.css'
 
@@ -28,7 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={
+          <div className="h-vh w-full grid__center">
+            <LoadingIcon width='60' height='60' className='spin' />
+          </div>
+        }>
           {children}
         </Suspense>
       </body>

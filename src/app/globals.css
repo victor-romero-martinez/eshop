@@ -23,7 +23,6 @@ html {
 }
 
 body {
-  min-height: 100dvh;
   margin: 0;
   padding: 0;
 }
@@ -70,12 +69,21 @@ button {
   height: 100%;
 }
 
+.h-vh {
+  min-height: 100dvh;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-fill {
   width: -webkit-fill-available;
+}
+
+.grid__center {
+  display: grid;
+  place-items: center;
 }
 
 .loader-comp {

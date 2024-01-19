@@ -84,6 +84,8 @@ function Navbar({ links }) {
 
         <NoSRRcart />
 
+        <Link href={"login"}>Log in</Link>
+
         <button
           title="open navBar"
           type="button"
