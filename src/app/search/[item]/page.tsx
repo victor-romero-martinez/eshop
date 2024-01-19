@@ -15,12 +15,12 @@ export const metadata: Metadata = {
   title: "Search"
 }
 
-export default async function Page({ searchParams }: {
-  searchParams?: {
-    q: string,
+export default async function Page({ params }: {
+  params: {
+    item: string,
   }
 }) {
-  const search = searchParams?.q
+  const search = params.item
 
   const data = await getData<TData>(`https://dummyjson.com/products/search?q=${search}`)
 

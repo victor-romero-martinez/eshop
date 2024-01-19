@@ -1,48 +1,39 @@
 import { SearchIcon } from "../icons";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 import './style.css';
+import { usePathname } from "next/navigation";
 
 export default function SearchInput() {
-  const route = useRouter()
   const [url, setUrl] = useState('')
+  const path = usePathname()
+  let newUrl = url;
 
-  function submit() {
-    route.push(`search?q=${url}`)
-    reset()
+  if (!path.includes('/search/')) {
+    newUrl = `search/${url}`
   }
-
-  function reset() {
-    return setUrl('')
-  }
-
-  document.addEventListener('keyup', function (event) {
-    if (event.keyCode === 13) {
-      submit();
-    }
-  });
 
   return (
-    <div className="search">
-      <input
-        type="search"
-        placeholder="Alt + s"
-        maxLength={8}
-        accessKey="s"
-        className="search-input"
-        value={url}
-        onChange={(e) => setUrl(e.target.value)}
-      />
-      <button
-        type="submit"
-        role="button"
-        title="search"
-        className="search-btn"
-        onClick={submit}
-      >
-        {<SearchIcon size="16" />}
-      </button>
-    </div>
+    <form action={newUrl}>
+      <div className="search">
+        <input
+          type="search"
+          placeholder="Alt + s"
+          maxLength={8}
+          accessKey="s"
+          className="search-input"
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
+        />
+        <button
+          type="submit"
+          title="search"
+          className="search-btn"
+        // onClick={submit}
+        >
+          {<SearchIcon size="16" />}
+        </button>
+      </div>
+    </form>
   )
 };
