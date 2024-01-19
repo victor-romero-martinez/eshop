@@ -1,16 +1,16 @@
-import { SearchIcon } from "../icons";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { SearchIcon } from "../icons";
 
 import './style.css';
-import { usePathname } from "next/navigation";
 
 export default function SearchInput() {
   const [url, setUrl] = useState('')
   const path = usePathname()
-  let newUrl = url;
+  let newUrl = `search/${url}`;
 
-  if (!path.includes('/search/')) {
-    newUrl = `search/${url}`
+  if (path.includes("/search/")) {
+    newUrl = url
   }
 
   return (
