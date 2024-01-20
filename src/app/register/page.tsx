@@ -1,14 +1,24 @@
 import Link from 'next/link'
+import { register } from '@/lib/actions'
+import { postData } from '@/lib/fetch/postFetch'
 
 import './styles.css'
 
-export default function Page() {
+export default async function Page() {
+  // const createUser = await postData('https://dummyjson.com/users/add', {
+  //   firstName: 'Muhammad',
+  //   lastName: 'Ovi',
+  //   age: 250,
+  // })
+
+  // console.log('createUser: ', createUser);
+
   return (
     <main className='w-full h-vh grid__center'>
       <div className="container box__form ">
         <h1>Register</h1>
 
-        <form action="/">
+        <form action={register}>
 
           <div>
             <label htmlFor="username">
@@ -17,6 +27,7 @@ export default function Page() {
             <input
               type="text"
               id='username'
+              name='username'
               placeholder='John Doe'
               minLength={4}
               required
@@ -30,6 +41,7 @@ export default function Page() {
             <input
               type="email"
               id='email'
+              name='email'
               placeholder='example@gmail.com'
               required
             />
@@ -41,12 +53,13 @@ export default function Page() {
           <input
             type="password"
             id='password'
+            name='password'
             placeholder='****'
             minLength={4}
             required
           />
 
-          <button type='button'>
+          <button type='submit'>
             Register now
           </button>
         </form>

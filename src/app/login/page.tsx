@@ -1,23 +1,25 @@
+'use client'
 import Link from 'next/link'
+import { login } from '@/lib/actions'
 import { postData } from '@/lib/fetch/postFetch'
 
 import './styles.css'
 
-export default async function Page() {
-  const logUser = await postData('https://dummyjson.com/auth/login', {
-    username: 'kminchelle',
-    password: '0lelplR',
-  })
+export default function Page() {
 
-  console.log(logUser);
+  // const logUser = await postData('https://dummyjson.com/auth/login', {
+  //   username: 'kminchelle',
+  //   password: '0lelplR',
+  // })
 
+  // console.log(logUser);
 
   return (
     <main className='w-full h-vh grid__center'>
       <div className="container box__form ">
         <h1>Login</h1>
 
-        <form action="#">
+        <form action={login}>
 
           <div>
             <label htmlFor="email">
@@ -25,9 +27,11 @@ export default async function Page() {
             </label>
             <input
               type="email"
+              name='email'
               id='email'
               placeholder='example@gmail.com'
               required
+              value='example@gmail.com'
             />
           </div>
 
@@ -38,9 +42,11 @@ export default async function Page() {
             <input
               type="password"
               id='password'
+              name='password'
               minLength={4}
               placeholder='****'
               required
+              value='123456'
             />
           </div>
 
