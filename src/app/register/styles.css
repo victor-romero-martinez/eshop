@@ -49,7 +49,6 @@ form button {
 @media (hover:hover) {
   form button:hover {
     background-color: var(--secondary);
-    color: #4b4b4b;
   }
 
   .box__form span a:hover {

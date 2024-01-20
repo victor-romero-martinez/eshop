@@ -1,4 +1,3 @@
-import Btn from '@/components/ui/Btnbtn/Btn'
 import Link from 'next/link'
 
 import './styles.css'
@@ -6,41 +5,47 @@ import './styles.css'
 export default function Page() {
   return (
     <main className='w-full h-vh grid__center'>
-      <div className="container padding box__form ">
-        <h1>Log in</h1>
+      <div className="container box__form ">
+        <h1>Login</h1>
 
         <form action="/">
-          <label htmlFor="email">
+
+          <div>
+            <label htmlFor="email">
+              Email
+            </label>
             <input
               type="email"
               id='email'
               placeholder='example@gmail.com'
+              required
             />
-          </label>
+          </div>
 
-          <label htmlFor="password">
+          <div>
+            <label htmlFor="password">
+              Password
+            </label>
             <input
               type="password"
               id='password'
-              placeholder='****'
               minLength={4}
+              placeholder='****'
+              required
             />
-          </label>
+          </div>
 
-          <Btn
-            type='submit'
-            styles={{
-              backgroundColor: 'var(--primary)',
-              cursor: 'pointer'
-            }}
+          <button
+            type='button'
           >
-            Log-in
-          </Btn>
+            Login
+          </button>
+
         </form>
 
         <span>Or &nbsp;
           <Link href={'register'} >
-            register
+            Register
           </Link>
         </span>
       </div>
