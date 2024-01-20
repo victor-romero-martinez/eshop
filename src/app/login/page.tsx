@@ -1,14 +1,23 @@
 import Link from 'next/link'
+import { postData } from '@/lib/fetch/postFetch'
 
 import './styles.css'
 
-export default function Page() {
+export default async function Page() {
+  const logUser = await postData('https://dummyjson.com/auth/login', {
+    username: 'kminchelle',
+    password: '0lelplR',
+  })
+
+  console.log(logUser);
+
+
   return (
     <main className='w-full h-vh grid__center'>
       <div className="container box__form ">
         <h1>Login</h1>
 
-        <form action="/">
+        <form action="#">
 
           <div>
             <label htmlFor="email">
@@ -36,7 +45,7 @@ export default function Page() {
           </div>
 
           <button
-            type='button'
+            type='submit'
           >
             Login
           </button>
