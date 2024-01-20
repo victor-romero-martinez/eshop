@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 import FilterComponent from "@/components/filterComponent/FilterComp";
 import LinkActive from "@/components/ui/linkActive/LinkActive";
-import { getData } from "@/lib/getFetch";
+import { getData } from "@/lib/fetch/getFetch";
 import Loading from "@/components/loading/Loading";
 
 import './style.css'

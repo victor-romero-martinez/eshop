@@ -1,7 +1,7 @@
 import { DollarIcon, ShoppingBagIcon, StarIcon } from "@/components/icons/icons";
 import Badges from "@/components/ui/badges/Badges";
 import { Product } from "@/definitions/type";
-import { getData } from "@/lib/getFetch";
+import { getData } from "@/lib/fetch/getFetch";
 import ImageViewer from "@/components/imageViewer/ImageViewer";
 import { Metadata } from "next";
 import BtnAddToCart from "@/components/ui/btnAddToCart/BtnAddToCart";

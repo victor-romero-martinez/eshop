@@ -1,4 +1,4 @@
-import { getData } from "@/lib/getFetch";
+import { getData } from "@/lib/fetch/getFetch";
 import type { Product, TPagination } from "@/definitions/type";
 import ProductsViewer from "@/components/productsViewer/ProductViewer";
 import { paginationSplit } from "@/lib/paginatioFn";

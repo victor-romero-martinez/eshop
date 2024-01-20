@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import { Product } from "@/definitions/type"
-import { getData } from "@/lib/getFetch"
+import { getData } from "@/lib/fetch/getFetch"
 import CardProduct from "@/components/cardProduct/CardProduct"
 
 import './style.css'
