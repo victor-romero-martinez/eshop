@@ -9,17 +9,12 @@ export function paginationSplit({
   const element = [];
   const res = totalPages(total, limit);
 
-  for (let i = 0; i < res; i++) {
+  for (let i = 1; i <= res; i++) {
     element.push(i);
   }
   return element;
 }
 
 function totalPages(x: number, y: number) {
-  const res = x / y;
-  if (Number.isInteger(res)) {
-    return res;
-  }
-
-  return Math.floor(res) + 1;
+  return Math.ceil(x / y);
 }
