@@ -18,7 +18,8 @@ export default function PaginationFc({ page }: {
       <Link
         href={`?limit=16&skip=${nextPage}`}
       >
-        {page + 1}
+        {/* TODO --> fix total of pagination */}
+        {page}
       </Link>
     </div>
   )
