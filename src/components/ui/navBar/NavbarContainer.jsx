@@ -74,6 +74,19 @@ function Navbar({ links, user }) {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  {user ? (
+                    <Link
+                      href={"profile"}
+                      onClick={toggleMenu}
+                      data-active={pathname === "/profile"}
+                    >
+                      profile
+                    </Link>
+                  ) : (
+                    <Link href={"login"}>login</Link>
+                  )}
+                </li>
               </ul>
             </div>
           </nav>

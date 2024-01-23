@@ -162,6 +162,18 @@ a[data-active="true"] {
   opacity: 1;
 }
 
+.login__btn {
+  display: none;
+  height: fit-content;
+  background-color: var(--secondary);
+  padding: 0 6px;
+  border-radius: var(--border);
+}
+
+.login__btn-img {
+  display: none;
+}
+
 .touch {
   cursor: pointer;
   transition: all .2s ease-in-out;
@@ -179,6 +191,9 @@ a[data-active="true"] {
 
 /* media query */
 @media (width > 499px) {
+
+  .login__btn,
+  .login__btn-img,
   .cart__conatiner>div {
     display: block;
   }
