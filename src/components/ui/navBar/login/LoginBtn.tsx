@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
-export default async function LoginBtn({ email, image }: { email?: string, image?: string }) {
+export default function LoginBtn({ email, image }: { email?: string, image?: string }) {
 
   return (
     <>
