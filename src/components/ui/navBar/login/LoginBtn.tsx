@@ -10,7 +10,7 @@ export default function LoginBtn({ email, image }: { email?: string, image?: str
           <img src={image} alt={`Avatar of ${email}`} width={24} />
         </Link>
       ) : (
-        <Link href={"/login"} className="login__btn touch">Log in</Link>
+        <Link href={"/login"} className="login__btn touch">Login</Link>
       )}
     </>
   )
