@@ -8,7 +8,7 @@ export default function PaginationFc({ page }: {
 }) {
   const searchParams = useSearchParams()
   const nextPage = page * 16;
-  const skip = searchParams.get('skip') ?? 0
+  const skip = searchParams.get('skip') ?? 16
 
   return (
     <div
@@ -18,7 +18,6 @@ export default function PaginationFc({ page }: {
       <Link
         href={`?limit=16&skip=${nextPage}`}
       >
-        {/* TODO --> fix total of pagination */}
         {page}
       </Link>
     </div>

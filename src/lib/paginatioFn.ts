@@ -16,5 +16,5 @@ export function paginationSplit({
 }
 
 function totalPages(x: number, y: number) {
-  return Math.ceil(x / y);
+  return Math.floor(x / y);
 }
