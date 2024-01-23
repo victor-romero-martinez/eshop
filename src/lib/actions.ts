@@ -1,9 +1,23 @@
 "use server";
 
+import { signIn } from "@/auth";
+import { AuthError } from "next-auth";
+
 export async function login(formData: FormData) {
-  return console.log(
-    `email: ${formData.get("email")}, password: ${formData.get("password")}`
-  );
+  try {
+    await signIn("credentials", formData);
+  } catch (error) {
+    if (error instanceof AuthError) {
+      switch (error.type) {
+        case "CredentialsSignin":
+          return "Invalid credentials.";
+
+        default:
+          return "Somenthing went wrong.";
+      }
+    }
+    throw error;
+  }
 }
 
 export async function register(formData: FormData) {

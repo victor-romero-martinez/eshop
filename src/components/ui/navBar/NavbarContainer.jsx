@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import { menuIcon, shoppingCartIcon, xIcon } from "./icons";
 import { useUIStore } from "@/store/uiStore";
 import SearchInput from "./search/Search";
+import LoginBtn from "./login/LoginBtn";
 
 import "./style.css";
 
@@ -24,8 +25,9 @@ const NoSRRcartOnMobile = dynamic(
 /** NavBar responsive component
  * @param {Object} props
  * @param {{name: string, url: string}[]} props.links - Array of element
+ * @param {{email: string, image: string} | any} props.user - User login
  */
-function Navbar({ links }) {
+function Navbar({ links, user }) {
   const pathname = usePathname();
 
   const isOpenNav = useUIStore((state) => state.navBar);
@@ -84,7 +86,7 @@ function Navbar({ links }) {
 
         <NoSRRcart />
 
-        <Link href={"/login"}>Log in</Link>
+        <LoginBtn email={user?.email} image={user?.image} />
 
         <button
           title="open navBar"

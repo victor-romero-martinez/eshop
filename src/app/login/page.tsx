@@ -1,18 +1,26 @@
 'use client'
+import { ChangeEvent, useState } from 'react'
 import Link from 'next/link'
 import { login } from '@/lib/actions'
-import { postData } from '@/lib/fetch/postFetch'
 
 import './styles.css'
 
+const initilaForm = {
+  username: 'kminchelle',
+  password: '0lelplR'
+}
+
 export default function Page() {
+  const [form, setForm] = useState(initilaForm)
 
-  // const logUser = await postData('https://dummyjson.com/auth/login', {
-  //   username: 'kminchelle',
-  //   password: '0lelplR',
-  // })
-
-  // console.log(logUser);
+  function handleForm(e: ChangeEvent<HTMLInputElement>) {
+    setForm(prev => (
+      {
+        ...prev,
+        [e.target.name]: e.target.value
+      }
+    ))
+  }
 
   return (
     <main className='w-full h-vh grid__center'>
@@ -22,16 +30,17 @@ export default function Page() {
         <form action={login}>
 
           <div>
-            <label htmlFor="email">
-              Email
+            <label htmlFor="username">
+              Username
             </label>
             <input
-              type="email"
-              name='email'
-              id='email'
-              placeholder='example@gmail.com'
+              type="text"
+              name='username'
+              id='username'
+              placeholder='John Doe'
               required
-              value='example@gmail.com'
+              value={form.username}
+              onChange={(e) => handleForm(e)}
             />
           </div>
 
@@ -46,7 +55,8 @@ export default function Page() {
               minLength={4}
               placeholder='****'
               required
-              value='123456'
+              value={form.password}
+              onChange={(e) => handleForm(e)}
             />
           </div>
 

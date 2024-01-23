@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Navbar from '@/components/ui/navBar/NavbarContainer'
+import { auth } from "@/auth";
 import Image from "next/image";
+import Navbar from '@/components/ui/navBar/NavbarContainer'
 
 import './style.css'
 
@@ -9,7 +10,9 @@ const navLink = [
   { url: '/blog', name: 'blog' },
 ]
 
-export default function Header() {
+export default async function Header() {
+  const userAuth = await auth()
+
   return (
     <header className="header">
       <div className="container__header container padding">
@@ -23,7 +26,7 @@ export default function Header() {
             className="logo-img"
           />
         </Link>
-        <Navbar links={navLink} />
+        <Navbar links={navLink} user={userAuth?.user} />
       </div>
     </header>
   )

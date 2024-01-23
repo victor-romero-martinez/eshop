@@ -1,0 +1,15 @@
+.btn__signout {
+  color: #fff;
+  background-color: #d83c3c;
+  font-size: var(--font-md);
+  padding: 4px 12px;
+  border-radius: var(--border);
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+@media (hover:hover) {
+  .btn__signout:hover {
+    background-color: #ff0000;
+  }
+}
