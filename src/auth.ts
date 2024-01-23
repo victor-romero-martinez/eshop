@@ -2,12 +2,16 @@ import NextAuth from "next-auth";
 import { authConfig } from "./auth.config";
 import Credentials from "next-auth/providers/credentials";
 import { postData } from "./lib/fetch/postFetch";
+import { TUserAuthResponse } from "./definitions/type";
 
 async function getUser(username: string, password: string) {
-  const res = await postData("https://dummyjson.com/auth/login", {
-    username,
-    password,
-  });
+  const res = await postData<TUserAuthResponse>(
+    "https://dummyjson.com/auth/login",
+    {
+      username,
+      password,
+    }
+  );
 
   return res;
 }
@@ -24,9 +28,11 @@ export const { auth, signIn, signOut } = NextAuth({
 
         if (!user) return null;
 
-        console.log("auth.js user: ", user);
+        // insert token on name for searh user auth
+        const name = user.token;
+        const newUser = { ...user, name };
 
-        return user;
+        return newUser;
       },
     }),
   ],

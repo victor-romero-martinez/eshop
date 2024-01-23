@@ -1,3 +1,28 @@
+h1 {
+  text-align: center;
+}
+
+/* container */
+.grid__display {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* avatar section */
+.avatar__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.grid__display .avatar__section img {
+  width: 120px;
+  border-radius: var(--border);
+}
+
 .btn__signout {
   color: #fff;
   background-color: #d83c3c;
@@ -8,8 +33,19 @@
   transition: background-color .2s;
 }
 
+/* info profile */
+.info__profile p span {
+  font-weight: 700;
+}
+
 @media (hover:hover) {
   .btn__signout:hover {
     background-color: #ff0000;
+  }
+}
+
+@media (width > 599px) {
+  .grid__display {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
