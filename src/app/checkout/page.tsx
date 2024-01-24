@@ -1,8 +1,13 @@
 import Link from 'next/link'
 import { auth } from '@/auth'
 import { redirect } from 'next/navigation'
-import './styles.css'
 import CheckOutItems from '@/components/checkoutTest/CheckOutItems'
+import { Metadata } from 'next'
+import './styles.css'
+
+export const metadata: Metadata = {
+  title: 'Checkout'
+}
 
 export default async function CheckOutPage() {
   const session = await auth()

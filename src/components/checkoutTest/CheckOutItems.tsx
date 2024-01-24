@@ -7,11 +7,11 @@ export default function CheckOutItems() {
   const { resetCart } = useUIShopStore();
   return (
     <div>
-      <span>Cart:</span>
-      <pre>
+      <button onClick={() => resetCart()} className="reset__cart">Clear cart</button>
+
+      <pre className="cart__shopping">
         {JSON.stringify(shoppingCart, null, 2)}
       </pre>
-      <button onClick={() => resetCart()}>Reset</button>
     </div>
   )
 };

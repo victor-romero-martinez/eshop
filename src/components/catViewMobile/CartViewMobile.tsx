@@ -4,12 +4,19 @@ import CartView from '../cartView/CartView'
 import { useUIShopStore } from '@/store/shopStore'
 import { useUIStore } from '@/store/uiStore'
 import Btn from '../ui/Btnbtn/Btn'
+import { useRouter } from 'next/navigation'
 
 import './style.css'
 
 export default function CartViewMobile({ click }: { click?: MouseEventHandler }) {
-  const { cart } = useUIStore()
+  const router = useRouter()
   const { shoppingCart } = useUIShopStore()
+  const { cart, toggleCart } = useUIStore()
+
+  const handleSubmit = () => {
+    toggleCart();
+    router.push("/checkout");
+  };
 
   return (
     <div
@@ -33,6 +40,7 @@ export default function CartViewMobile({ click }: { click?: MouseEventHandler })
               justifyContent: "center",
               cursor: "pointer",
             }}
+            click={handleSubmit}
           >
             Buy
           </Btn>

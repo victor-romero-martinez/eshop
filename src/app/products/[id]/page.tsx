@@ -5,6 +5,7 @@ import { getData } from "@/lib/fetch/getFetch";
 import ImageViewer from "@/components/imageViewer/ImageViewer";
 import { Metadata } from "next";
 import BtnAddToCart from "@/components/ui/btnAddToCart/BtnAddToCart";
+import CardMedium from "@/components/cardMedium/CardMedium";
 
 import './style.css'
 
@@ -53,6 +54,20 @@ export default async function Page({ params }: { params: { id: string } }) {
           </div>
         </div>
       </article>
+      <CardMedium
+        img='/smartphone.webp'
+        color='#c73412'
+        backgroundColor='#fbbbeb'
+        spanRight='20% off'
+        p1Right='good'
+        p2Right='day'
+        date='15 nov to 7 dic'
+        spanLeft='connect people'
+        h2='Summer Sale'
+        pLeft='Company thats grown from 270 to 480 employees in
+        the last 12 months.'
+        linkTxt='/samersale'
+      />
     </main>
   )
 };

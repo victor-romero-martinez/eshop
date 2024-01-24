@@ -1,5 +1,23 @@
-.gohome {
-  background-color: var(--primary);
+.gohome,
+.reset__cart,
+.cart__shopping {
   border-radius: var(--border);
   padding: 3px 12px;
+  margin-block: 18px;
+}
+
+.gohome {
+  background-color: var(--primary);
+}
+
+.reset__cart {
+  color: #ffffff;
+  background-color: #ff0000;
+  cursor: pointer;
+}
+
+.cart__shopping {
+  max-width: 400px;
+  background-color: #faf6f693;
+  overflow-x: scroll;
 }

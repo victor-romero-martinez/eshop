@@ -6,7 +6,7 @@ import "./style.css";
  * @param {React.ReactNode} props.children - Element
  * @param {"button" | "reset" | "submit"} [props.type] - Button type
  * @param {object} [props.styles] - CSSProperties
- * @param {import("react").MouseEventHandler} [props.click] - Click event
+ * @param {() => void} [props.click] - Click event
  * @param {boolean} [props.isDisable] - Disable default `false`
  * @description Use only flex container
  */

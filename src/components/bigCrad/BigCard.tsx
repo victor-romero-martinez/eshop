@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import LinkBtn from '@/components/ui/linkBtn/LinkBtn'
 import './style.css'
 
 export default function BigCard() {
@@ -11,7 +10,6 @@ export default function BigCard() {
             <br />
             <span>Wireless</span>
           </h2>
-          <LinkBtn href='/onprogress' styles={{ color: '#ff6347' }}>Shop now</LinkBtn>
         </div>
         <div className='desc__container h-full w-fill _padding__inline'>
           <p className='desc__title'>Description</p>
