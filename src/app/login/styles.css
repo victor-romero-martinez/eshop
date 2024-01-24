@@ -46,6 +46,14 @@ form button {
   text-align: end;
 }
 
+.box__form span a {
+  color: #0e4fcf;
+}
+
+.recovery {
+  font-size: var(--font-sm);
+}
+
 @media (hover:hover) {
   form button:hover {
     background-color: var(--secondary);

@@ -68,9 +68,15 @@ export default function Page() {
 
         </form>
 
-        <span>Or &nbsp;
+        <span>Don&apos;t have an account? &nbsp;
           <Link href={'register'} >
             Register
+          </Link>
+        </span>
+
+        <span className='recovery'>Recovery&nbsp;
+          <Link href={'https://dummyjson.com/user'} target='_blank' rel='noopener noreferrer' >
+            Password
           </Link>
         </span>
       </div>
