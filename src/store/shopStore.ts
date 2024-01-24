@@ -9,6 +9,7 @@ type TCartSate = {
 type TCartAction = {
   addToCart: (item: Product) => void;
   removeToCart: (id: number | string) => void;
+  resetCart: () => void;
 };
 
 export const useUIShopStore = create<TCartSate & TCartAction>()(
@@ -24,6 +25,11 @@ export const useUIShopStore = create<TCartSate & TCartAction>()(
       removeToCart: (id) =>
         set((state) => ({
           shoppingCart: state.shoppingCart.filter((i) => i.id !== id),
+        })),
+
+      resetCart: () =>
+        set(() => ({
+          shoppingCart: [],
         })),
     }),
     {

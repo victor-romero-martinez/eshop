@@ -28,7 +28,7 @@ export const { auth, signIn, signOut } = NextAuth({
 
         if (!user) return null;
 
-        // insert token on name for searh user auth
+        // insert token on name for searh user auth, don't do this at home
         const name = user.token;
         const newUser = { ...user, name };
 

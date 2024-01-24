@@ -3,13 +3,20 @@ import { shoppingCartIcon } from "../icons";
 import { useUIShopStore } from "@/store/shopStore";
 import { useUIStore } from "@/store/uiStore";
 import Btn from "../../Btnbtn/Btn";
+import { useRouter } from "next/navigation";
 
 /** No SRR cart component */
 export default function NavComp() {
   const { shoppingCart } = useUIShopStore();
+  const router = useRouter();
 
   const isOpenCart = useUIStore((state) => state.cart);
   const toggleCart = useUIStore((state) => state.toggleCart);
+
+  const handleSubmit = () => {
+    toggleCart();
+    router.push("/checkout");
+  };
 
   return (
     <>
@@ -49,6 +56,7 @@ export default function NavComp() {
               {shoppingCart.length > 0 && (
                 <Btn
                   type="button"
+                  click={handleSubmit}
                   styles={{
                     backgroundColor: "var(--primary)",
                     fontSize: "var(--font-lg)",

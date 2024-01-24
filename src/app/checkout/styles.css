@@ -1,0 +1,5 @@
+.gohome {
+  background-color: var(--primary);
+  border-radius: var(--border);
+  padding: 3px 12px;
+}
