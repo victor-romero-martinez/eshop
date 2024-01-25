@@ -105,8 +105,8 @@ export type Crypto = {
 };
 
 export type TUserAuthResponse = {
-  id?: string;
-  username?: string;
+  id: string;
+  username: string;
   email: string;
   firstName?: string;
   lastName?: string;
