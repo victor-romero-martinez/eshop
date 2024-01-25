@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   const session = await auth()
-  const token = session?.user?.name
+  const token = session?.user?.token
 
   // error has ocurred
   if (!token) {
