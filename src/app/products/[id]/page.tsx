@@ -1,4 +1,4 @@
-import { DollarIcon, ShoppingBagIcon, StarIcon } from "@/components/icons/icons";
+import { DollarIcon, StarIcon } from "@/components/icons/icons";
 import Badges from "@/components/ui/badges/Badges";
 import { Product } from "@/types/type";
 import { getData } from "@/lib/fetch/getFetch";
