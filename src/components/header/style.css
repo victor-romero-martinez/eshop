@@ -1,5 +1,4 @@
 .header {
-  width: 100%;
   background-color: #fff;
   position: sticky;
   top: 0;
@@ -14,11 +13,21 @@
 }
 
 .logo-img {
-  transform: scale(.7);
+  display: none;
 }
 
-@media (width > 399px) {
+/* .login__options a {
+  display: block;
+} */
+
+.login__options button,
+.login__options a {
+  display: flex;
+  align-items: center;
+}
+
+@media (width > 449px) {
   .logo-img {
-    transform: scale(1);
+    display: block;
   }
 }

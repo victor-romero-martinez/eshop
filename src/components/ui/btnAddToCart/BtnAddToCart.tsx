@@ -1,7 +1,7 @@
 'use client'
 import { BagCheckIcon, ShoppingBagIcon } from "@/components/icons/icons"
 import Btn from "../Btnbtn/Btn"
-import { Product } from "@/definitions/type"
+import { Product } from "@/types/type"
 import { useUIShopStore } from "@/store/shopStore"
 
 export default function BtnAddToCart({ item }: { item: Product }) {

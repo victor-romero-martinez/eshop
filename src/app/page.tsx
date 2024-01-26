@@ -8,7 +8,7 @@ import CategorySection from '@/components/categorySection/CategorySection'
 import Feature from '@/components/feature/Feature'
 import News from '@/components/news/News'
 import { getData } from '@/lib/fetch/getFetch'
-import type { Product } from '@/definitions/type'
+import type { Product } from '@/types/type'
 import Header from '@/components/header/Header'
 
 type Data = {

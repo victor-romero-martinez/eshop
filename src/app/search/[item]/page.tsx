@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { Product } from "@/definitions/type"
+import { Product } from "@/types/type"
 import { getData } from "@/lib/fetch/getFetch"
 import CardProduct from "@/components/cardProduct/CardProduct"
 

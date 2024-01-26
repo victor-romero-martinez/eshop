@@ -1,5 +1,5 @@
 import { getData } from "@/lib/fetch/getFetch";
-import type { Product, TPagination } from "@/definitions/type";
+import type { Product, TPagination } from "@/types/type";
 import ProductsViewer from "@/components/productsViewer/ProductViewer";
 import { paginationSplit } from "@/lib/paginatioFn";
 import { CSSProperties } from "react";

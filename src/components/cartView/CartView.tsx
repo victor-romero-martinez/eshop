@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Product } from '@/definitions/type'
+import { Product } from '@/types/type'
 import { BagCheckIcon, BagEmptyIcon, DollarIcon, TrashIcon } from '../icons/icons'
 import { useUIShopStore } from '@/store/shopStore'
 

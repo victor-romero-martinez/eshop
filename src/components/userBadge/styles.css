@@ -1,0 +1,25 @@
+.user__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user__badge picture {
+  display: grid;
+  place-items: center;
+}
+
+.user__badge img {
+  width: 30px;
+}
+
+.user__badge-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user__badge-info span:last-child {
+  font-size: var(--font-sm);
+  margin-top: -8px;
+  opacity: .6;
+}

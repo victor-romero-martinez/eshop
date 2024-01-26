@@ -1,4 +1,4 @@
-import type { Product } from '@/definitions/type'
+import type { Product } from '@/types/type'
 import CardProduct from '../cardProduct/CardProduct'
 
 import './style.css'

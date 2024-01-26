@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { Product } from "@/definitions/type";
+import type { Product } from "@/types/type";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 type TCartSate = {

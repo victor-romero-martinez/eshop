@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Loading from "@/components/loading/Loading";
 import CardProduct from "@/components/cardProduct/CardProduct";
-import { Product } from "@/definitions/type";
+import { Product } from "@/types/type";
 import { getData } from "@/lib/fetch/getFetch";
 import { Metadata } from "next";
 

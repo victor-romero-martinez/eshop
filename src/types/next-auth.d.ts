@@ -12,7 +12,7 @@ declare module "next-auth" {
   interface Session {
     user: {
       /** The user's username. */
-      name: string;
+      username: string;
       /** The user's token auth. */
       token: string;
     } & DefaultSession["user"];

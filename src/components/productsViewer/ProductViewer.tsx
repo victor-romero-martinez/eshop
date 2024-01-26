@@ -1,5 +1,5 @@
 import CardProduct from "../cardProduct/CardProduct";
-import { Product } from "@/definitions/type";
+import { Product } from "@/types/type";
 import PaginationFc from "../ui/pagination/PaginationFc";
 
 import './style.css'
