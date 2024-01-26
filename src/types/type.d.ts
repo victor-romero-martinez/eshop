@@ -20,6 +20,12 @@ export type TPagination = {
   limit: number;
 };
 
+// link
+export type Tlinks = {
+  url: string;
+  name: string;
+}[];
+
 // User
 export type TUser = {
   id: number;

@@ -1,12 +1,12 @@
-import CartView from "@/components/cartView/CartView";
-import { shoppingCartIcon } from "../icons";
+import { useRouter } from "next/navigation";
 import { useUIShopStore } from "@/store/shopStore";
 import { useUIStore } from "@/store/uiStore";
-import Btn from "../../Btnbtn/Btn";
-import { useRouter } from "next/navigation";
+import { ShoppinBagIcon } from "@/components/icons/icons";
+import CartView from "@/components/cartView/CartView";
+import Btn from "../Btnbtn/Btn";
 
 /** No SRR cart component */
-export default function NavComp() {
+export default function CartShopping() {
   const { shoppingCart } = useUIShopStore();
   const router = useRouter();
 
@@ -24,10 +24,10 @@ export default function NavComp() {
         <button
           type="button"
           title="shopping cart"
-          className="Btn touch"
+          className="Btn"
           onClick={toggleCart}
         >
-          {shoppingCartIcon}
+          <ShoppinBagIcon />
           {shoppingCart.length > 0 && (
             <span className="cart__counter">{shoppingCart.length}</span>
           )}

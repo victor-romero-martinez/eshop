@@ -1,45 +1,40 @@
-import Link from "next/link";
-import { auth, signOut } from "@/auth";
-import { LogInIcon } from "../icons/icons";
-import Image from "next/image";
-import Navbar from '@/components/ui/navBar/NavbarContainer'
+import { auth } from "@/auth";
+import LinkNav from "./nav/LinkNav";
+import Logo from "./Logo";
 import UserBadge from "../userBadge/UserBadge";
+import LoginBtnNav from "./nav/LoginBtnNav";
+import SearchInput from "../ui/search/Search";
+import NoSSRCart from "../ui/noSRR/NoSRR";
+import MenuOnMobile from "./nav/MenuOnMobile";
 
 import './style.css'
 
 const navLink = [
-  { url: '/products', name: 'products' },
-  { url: '/blog', name: 'blog' },
+  { url: '/products', name: 'Products' },
+  { url: '/blog', name: 'Blog' },
 ]
 
 export default async function Header() {
   const session = await auth()
+  const islogin = session?.user ? true : false
 
   return (
     <header className="header w-full">
       <div className="container__header container padding">
-        <Link href='/'>
-          <Image
-            src='/logo.webp'
-            alt="phlox logo"
-            width={128}
-            height={49}
-            priority
-            className="logo-img"
-          />
-        </Link>
 
-        <Navbar links={navLink} />
-
-        <div className="login__options h-full">
-          {session?.user ? (
-            <UserBadge />
-          ) : (
-            <Link href={"/login"} className="logout touch" title="LogIn">
-              <LogInIcon width='28' height='28' />
-            </Link>
-          )}
+        <div className="header__flex">
+          <Logo />
+          <LinkNav link={navLink} />
         </div>
+
+        <div className="header__flex">
+          <SearchInput />
+          {islogin && (<UserBadge />)}
+          <NoSSRCart />
+          <LoginBtnNav isLogin={islogin} />
+          <MenuOnMobile links={navLink} />
+        </div>
+
       </div>
     </header>
   )

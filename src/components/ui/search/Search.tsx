@@ -1,6 +1,7 @@
+'use client'
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { SearchIcon } from "../icons";
+import { SearchIcon } from "@/components/icons/icons";
 
 import './style.css';
 

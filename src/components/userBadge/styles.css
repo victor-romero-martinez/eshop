@@ -9,10 +9,6 @@
   place-items: center;
 }
 
-.user__badge img {
-  width: 30px;
-}
-
 .user__badge-info {
   display: none;
   flex-direction: column;
@@ -24,7 +20,7 @@
   opacity: .6;
 }
 
-@media (width > 499px) {
+@media (width > 699px) {
   .user__badge-info {
     display: flex;
   }

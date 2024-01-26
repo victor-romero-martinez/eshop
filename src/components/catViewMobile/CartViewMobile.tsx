@@ -1,4 +1,3 @@
-import { MouseEventHandler } from 'react'
 import { xIcon } from '../ui/navBar/icons'
 import CartView from '../cartView/CartView'
 import { useUIShopStore } from '@/store/shopStore'
@@ -8,7 +7,7 @@ import { useRouter } from 'next/navigation'
 
 import './style.css'
 
-export default function CartViewMobile({ click }: { click?: MouseEventHandler }) {
+export default function CartViewMobile({ click }: { click?: () => void }) {
   const router = useRouter()
   const { shoppingCart } = useUIShopStore()
   const { cart, toggleCart } = useUIStore()

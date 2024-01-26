@@ -165,7 +165,7 @@ const DollarIcon = ({ ...props }) => (
     {...props}><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2" /><path d="M12 3v3m0 12v3" /></svg>
 )
 
-const ShoppingBagIcon = ({ ...props }) => (
+const AddShoppingBagIcon = ({ ...props }) => (
   <svg xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -308,8 +308,83 @@ const LogInIcon = ({ ...props }) => (
     {...props}><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M3 12h13l-3 -3" /><path d="M13 15l3 -3" /></svg>
 )
 
+const SearchIcon = ({ size = "24" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    strokeWidth="2"
+    stroke="currentColor"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M21 21l-6 -6" />
+  </svg>
+);
+
+const ShoppinBagIcon = ({ ...props }) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    strokeWidth="2"
+    stroke="currentColor"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
+    <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+  </svg>
+)
+
+const CloseIcon = ({ ...props }) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    strokeWidth="2"
+    stroke="currentColor"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M18 6l-12 12" />
+    <path d="M6 6l12 12" />
+  </svg>
+)
+
+const MenuIcon = ({ ...props }) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    strokeWidth="2"
+    stroke="currentColor"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M4 6h16" />
+    <path d="M7 12h13" />
+    <path d="M10 18h10" />
+  </svg>
+)
+
 
 export {
+  ShoppinBagIcon,
+  MenuIcon,
+  CloseIcon,
   GuaranteeIcon,
   SupportIcon,
   TruckIcon,
@@ -320,7 +395,7 @@ export {
   PhoneIcon,
   MailIcon,
   MapPinIcon,
-  ShoppingBagIcon,
+  AddShoppingBagIcon,
   BagCheckIcon,
   BagEmptyIcon,
   DollarIcon,
@@ -331,5 +406,6 @@ export {
   LoadingIcon,
   TrashIcon,
   LogOutIcon,
-  LogInIcon
+  LogInIcon,
+  SearchIcon
 };
