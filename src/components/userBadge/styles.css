@@ -14,7 +14,7 @@
 }
 
 .user__badge-info {
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
@@ -22,4 +22,10 @@
   font-size: var(--font-sm);
   margin-top: -8px;
   opacity: .6;
+}
+
+@media (width > 499px) {
+  .user__badge-info {
+    display: flex;
+  }
 }

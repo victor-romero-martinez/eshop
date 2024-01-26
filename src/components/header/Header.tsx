@@ -31,20 +31,9 @@ export default async function Header() {
 
         <Navbar links={navLink} />
 
-        {session?.user && <UserBadge />}
-
         <div className="login__options h-full">
           {session?.user ? (
-            <form action={async () => {
-              'use server'
-              await signOut({
-                redirectTo: '/'
-              })
-            }}>
-              <button type="submit" title="LogOut" className="login touch">
-                <LogutIcon width='24' height='24' />
-              </button>
-            </form>
+            <UserBadge />
           ) : (
             <Link href={"/login"} className="logout touch" title="LogIn">
               <LoginIcon width='28' height='28' />

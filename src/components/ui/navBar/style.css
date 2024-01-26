@@ -108,9 +108,6 @@ a[data-active="true"] {
 }
 
 /* right */
-.right {
-  flex: 1;
-}
 
 /* left */
 .left {
