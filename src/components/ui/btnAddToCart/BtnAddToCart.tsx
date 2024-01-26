@@ -1,5 +1,5 @@
 'use client'
-import { BagCheckIcon, ShoppingBagIcon } from "@/components/icons/icons"
+import { BagCheckIcon, AddShoppingBagIcon } from "@/components/icons/icons"
 import Btn from "../Btnbtn/Btn"
 import { Product } from "@/types/type"
 import { useUIShopStore } from "@/store/shopStore"
@@ -28,7 +28,7 @@ export default function BtnAddToCart({ item }: { item: Product }) {
           }}
           click={addToCart}
         >
-          <ShoppingBagIcon width='18' height='18' />
+          <AddShoppingBagIcon width='18' height='18' />
           Buy
         </Btn>
       )}
