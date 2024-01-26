@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { FilterIcon } from '../icons/icons'
-import { xIcon } from '../ui/navBar/icons'
+import { CloseIcon, FilterIcon } from '../icons/icons'
 import LinkActive from '../ui/linkActive/LinkActive'
 
 import './style.css'
@@ -22,7 +21,7 @@ export default function FilterComponent({ items }: { items: string[] }) {
       </div>
       <div className='filter__mobile-content' data-filter={open}>
         <button type='button' title='close filter' onClick={toggleBtn}>
-          {xIcon}
+          <CloseIcon />
         </button>
         <ul className='container padding w-full'>
           <li>
