@@ -1,9 +1,9 @@
-import { xIcon } from '../ui/navBar/icons'
 import CartView from '../cartView/CartView'
 import { useUIShopStore } from '@/store/shopStore'
 import { useUIStore } from '@/store/uiStore'
 import Btn from '../ui/Btnbtn/Btn'
 import { useRouter } from 'next/navigation'
+import { CloseIcon } from '../icons/icons'
 
 import './style.css'
 
@@ -22,7 +22,7 @@ export default function CartViewMobile({ click }: { click?: () => void }) {
       className='cart__mobile'
       data-onmobile-cart={cart}>
       <button type='button' title='close cart' className='cart__mobile-xicon' onClick={click}>
-        {xIcon}
+        <CloseIcon />
       </button>
       <div className='cart__mobile-inner w-full'>
         <CartView items={shoppingCart} />
