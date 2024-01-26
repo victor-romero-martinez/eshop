@@ -9,7 +9,7 @@ export const authConfig = {
       const isLoggedIn = !!auth?.user;
 
       if (isLoggedIn) {
-        return Response.redirect(new URL("/", nextUrl));
+        return Response.redirect(new URL("/products", nextUrl));
       }
 
       return true;
