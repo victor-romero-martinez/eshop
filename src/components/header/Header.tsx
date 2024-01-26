@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { auth, signOut } from "@/auth";
-import { LoginIcon, LogutIcon } from "../icons/icons";
+import { LogInIcon } from "../icons/icons";
 import Image from "next/image";
 import Navbar from '@/components/ui/navBar/NavbarContainer'
 import UserBadge from "../userBadge/UserBadge";
@@ -36,7 +36,7 @@ export default async function Header() {
             <UserBadge />
           ) : (
             <Link href={"/login"} className="logout touch" title="LogIn">
-              <LoginIcon width='28' height='28' />
+              <LogInIcon width='28' height='28' />
             </Link>
           )}
         </div>
