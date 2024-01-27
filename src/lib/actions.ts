@@ -3,6 +3,7 @@
 import { signIn } from "@/auth";
 import { AuthError } from "next-auth";
 
+/** User login action */
 export async function login(formData: FormData) {
   try {
     await signIn("credentials", formData);
@@ -20,6 +21,7 @@ export async function login(formData: FormData) {
   }
 }
 
+/** New user register */
 export async function register(formData: FormData) {
   return console.log(
     `username: ${formData.get("username")}, email: ${formData.get(

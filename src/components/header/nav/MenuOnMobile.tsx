@@ -11,8 +11,8 @@ import './MenuOnMobile.styles.css'
 export default function MenuOnMobile({ links }: {
   links: Tlinks
 }) {
-  const { toggleNavbar, navBar } = useUIStore()
-  const pathname = usePathname()
+  const { toggleNavbar, navBar } = useUIStore();
+  const pathname = usePathname();
 
   return (
     <>
@@ -36,6 +36,14 @@ export default function MenuOnMobile({ links }: {
           </button>
           <div className="navbar__hidden">
             <ul className="navbar__inner">
+              <li>
+                <Link
+                  href={'/'}
+                  data-active={pathname === '/'}
+                >
+                  Home
+                </Link>
+              </li>
               {links.map((l) => (
                 <li key={l.url}>
                   <Link

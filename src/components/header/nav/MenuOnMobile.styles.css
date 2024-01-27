@@ -7,7 +7,7 @@
   place-items: center;
   position: absolute;
   opacity: 0;
-  top: 0;
+  top: 200px;
   right: 0;
   visibility: hidden;
   transition: .2s ease-in-out;
@@ -16,6 +16,7 @@
 
 .mobile[data-open-nav="true"] {
   visibility: visible;
+  top: 0;
   opacity: 1;
 }
 

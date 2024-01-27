@@ -1,17 +1,9 @@
 import Link from 'next/link'
 import { register } from '@/lib/actions'
-import { postData } from '@/lib/fetch/postFetch'
 
 import './styles.css'
 
 export default async function Page() {
-  // const createUser = await postData('https://dummyjson.com/users/add', {
-  //   firstName: 'Muhammad',
-  //   lastName: 'Ovi',
-  //   age: 250,
-  // })
-
-  // console.log('createUser: ', createUser);
 
   return (
     <main className='w-full h-vh grid__center'>

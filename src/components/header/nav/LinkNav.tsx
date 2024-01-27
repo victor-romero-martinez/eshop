@@ -9,6 +9,14 @@ export default function LinkNav({ link }: { link: Tlinks }) {
 
   return (
     <ul className="link__nav">
+      <li>
+        <Link
+          href={'/'}
+          data-active={pathname === '/'}
+        >
+          Home
+        </Link>
+      </li>
       {link.map((l, i) => (
         <li key={i}>
           <Link
