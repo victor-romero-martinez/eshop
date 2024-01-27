@@ -6,12 +6,15 @@
 }
 
 /* header inner */
+.container__header {
+  padding-block: 16px;
+}
+
 .container__header,
 .header__flex {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-block: 16px;
   gap: 16px;
 }
 
