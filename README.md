@@ -1,8 +1,6 @@
-<img src="public\opengraph-image.webp" 
-        alt="e-shop web picture" 
-        width="480" 
-        height="360" 
-        style="display: block; margin: 0 auto" />
+<p align='center'>
+  <img src='./public/opengraph-image.webp' alt='Website screenshot' width='500'/>
+</p>
 
 # Práctica de front-end
 
